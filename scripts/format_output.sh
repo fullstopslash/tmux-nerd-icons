@@ -266,16 +266,54 @@ format_simple() {
     fi
 }
 
+# extract_json_field - Extract a field from JSON string
+#
+# Simple extraction without external dependencies.
+# Handles null values and quoted strings.
+#
+# Args:
+#   $1 - JSON string
+#   $2 - Field name
+#
+# Returns:
+#   Field value or empty string
+#
+extract_json_field() {
+    local json="$1"
+    local field="$2"
+
+    # Match "field": "value" or "field": null
+    local value
+    value=$(echo "${json}" | grep -o "\"${field}\"[[:space:]]*:[[:space:]]*\"[^\"]*\"" | sed 's/.*: *"\([^"]*\)".*/\1/' | head -1)
+
+    # If no quoted value found, check for null
+    if [[ -z "${value}" ]]; then
+        if echo "${json}" | grep -q "\"${field}\"[[:space:]]*:[[:space:]]*null"; then
+            value=""
+        fi
+    fi
+
+    echo "${value}"
+}
+
 # Main execution
 main() {
     # Get ring symbol based on window index
     local ring_sym
     ring_sym=$(get_ring_symbol "${index}")
 
-    # Get icon from resolver (simple mode for now)
-    # Future: could use JSON mode to extract per-icon colors
+    # Get icon with metadata from resolver (JSON mode)
+    local json_result
+    json_result=$(get_icon_with_colors)
+
+    # Extract icon from JSON
     local icon
-    icon=$(get_icon)
+    icon=$(extract_json_field "${json_result}" "icon")
+    [[ -z "${icon}" ]] && icon="󰽙"  # Fallback if extraction fails
+
+    # Extract multi-pane icon from config (empty/null means disabled)
+    local multi_pane_icon
+    multi_pane_icon=$(extract_json_field "${json_result}" "multi_pane_icon")
 
     # Determine ring color based on window active state
     local ring_color
@@ -285,13 +323,10 @@ main() {
         ring_color="${DEFAULT_RING_INACTIVE}"
     fi
 
-    # Multi-pane indicator (reserved for future enhancement)
-    # Could add a visual indicator for windows with multiple panes
+    # Multi-pane indicator - only show if config has it set and panes > 1
     local multi_pane_prefix=""
-    if [[ "${panes}" -gt 1 ]]; then
-        # Uncomment to add multi-pane indicator:
-        # multi_pane_prefix="󰕰 "
-        :
+    if [[ "${panes}" -gt 1 && -n "${multi_pane_icon}" ]]; then
+        multi_pane_prefix="${multi_pane_icon} "
     fi
 
     # Optional window name display

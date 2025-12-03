@@ -81,6 +81,7 @@ class IconResult:
     ring_color: str | None = None
     icon_color: str | None = None
     alert_color: str | None = None
+    multi_pane_icon: str | None = None
     source: str = "fallback"
 
 
@@ -406,33 +407,34 @@ def resolve_icon(
         ssh_host = parse_ssh_host(effective_cmdline)
 
     # Priority 1: Host icon (if prefer-host-icon is enabled and SSH detected)
+    result: IconResult | None = None
     if cfg.prefer_host_icon and ssh_host:
         result = _match_host(ssh_host, config.hosts, cfg)
-        if result:
-            return result
 
     # Priority 2: Title patterns within app definitions
-    result = _match_title_patterns(title, config.icons, cfg)
-    if result:
-        return result
+    if result is None:
+        result = _match_title_patterns(title, config.icons, cfg)
 
     # Priority 3: Title icons for TUI apps
-    result = _match_title_icons(title, config.title_icons, cfg)
-    if result:
-        return result
+    if result is None:
+        result = _match_title_icons(title, config.title_icons, cfg)
 
     # Priority 4: Process name match
-    result = _match_process(process, config.icons, cfg)
-    if result:
-        return result
+    if result is None:
+        result = _match_process(process, config.icons, cfg)
 
     # Priority 5: Session keywords
-    result = _match_session(session, config.sessions, cfg)
-    if result:
-        return result
+    if result is None:
+        result = _match_session(session, config.sessions, cfg)
 
     # Priority 6: Fallback icon
-    return IconResult(icon=cfg.fallback_icon, source="fallback")
+    if result is None:
+        result = IconResult(icon=cfg.fallback_icon, source="fallback")
+
+    # Add multi-pane icon from config (empty string means disabled)
+    result.multi_pane_icon = cfg.multi_pane_icon if cfg.multi_pane_icon else None
+
+    return result
 
 
 def main() -> int:
