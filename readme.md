@@ -1,6 +1,6 @@
 # tmux-nerd-icons
 
-Nerd Font icons for tmux windows with SSH detection, session-aware icons, and customizable ring symbols.
+Nerd Font icons for tmux windows with SSH detection and session-aware icons.
 
 ## Features
 
@@ -8,8 +8,6 @@ Nerd Font icons for tmux windows with SSH detection, session-aware icons, and cu
 - **SSH Detection** - Detect SSH/mosh connections and show host-specific icons
 - **Session Keywords** - Icons based on tmux session names (code, docker, git, etc.)
 - **Title Patterns** - Regex matching for dynamic icons (GitHub in Firefox, etc.)
-- **Ring Symbols** - Rotating window index indicators (󰬺󰬻󰬼󰬽󰬾󰬿󰭀󰭁󰭂󰿩)
-- **Active/Inactive Colors** - Visual distinction between focused and background windows
 - **Unified Config** - Uses `~/.config/nerd-icons/config.yml` (shared with Kitty, Waybar)
 
 ## Installation
@@ -43,10 +41,8 @@ The plugin reads from `~/.config/nerd-icons/config.yml`:
 ```yaml
 config:
   fallback-icon: ""
-  show-name: false
   prefer-host-icon: true
-  index-color-active: "#875fff"
-  index-color-inactive: "#45475a"
+  # multi-pane-icon: "󰎃"  # uncomment to show indicator for multi-pane windows
 
 icons:
   nvim: ""
@@ -68,9 +64,7 @@ sessions:
   git: "󰊢"
 
 hosts:
-  "*.prod.example.com":
-    icon: "󰣇"
-    ring-color: "#f38ba8"
+  "*.prod.example.com": "󰣇"
   "10.*.*.*": "󰟀"
 ```
 
@@ -78,13 +72,20 @@ hosts:
 
 | Option | Description | Default |
 |--------|-------------|---------|
-| `@nerd_icons_show_name` | Show window name with icon | `false` |
 | `@nerd_icons_config` | Override config path | `~/.config/nerd-icons/config.yml` |
 
-Example:
+### Styling (Colors, Index, Powerline)
+
+This plugin **only sets the window name** (`#W`) to an icon. All styling should be configured in your own `window-status-format` and `window-status-current-format`.
+
+Example tmux.conf:
 
 ```bash
-set -g @nerd_icons_show_name "true"
+# Active window: cyan icon
+set -g window-status-current-format "#[fg=#04a5e5]#I #W#[default]"
+
+# Inactive window: gray icon
+set -g window-status-format "#[fg=#666666]#I #W#[default]"
 ```
 
 ## Requirements
@@ -96,7 +97,7 @@ set -g @nerd_icons_show_name "true"
 ## How It Works
 
 1. `nerd-icons.tmux` - TPM entry point, sets up automatic-rename-format
-2. `format_output.sh` - Generates ring symbol + icon with tmux color codes
+2. `format_output.sh` - Gets icon from resolver, outputs plain icon as window name
 3. `icon_resolver.py` - Resolves icon based on process, title, session, host
 4. `yaml_parser.py` - Parses config (no external YAML dependencies)
 5. `ssh_parser.py` - Detects SSH/mosh connections from command lines
