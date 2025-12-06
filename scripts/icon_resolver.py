@@ -367,6 +367,7 @@ def resolve_icon(
     cmdline: str | None = None,
     pane_pid: int | None = None,
     config_path: str = "~/.config/nerd-icons/config.yml",
+    session_only: bool = False,
 ) -> IconResult:
     """Resolve the appropriate icon for a tmux window/pane context.
 
@@ -388,12 +389,22 @@ def resolve_icon(
             and pane_pid is given, cmdline is retrieved from /proc.
         pane_pid: Pane PID for automatic cmdline retrieval.
         config_path: Path to configuration file.
+        session_only: If True, skip process/title/host matching and only
+            resolve session icon. Useful for session status display.
 
     Returns:
         IconResult with the resolved icon and optional color metadata.
     """
     config = get_config(config_path)
     cfg = config.config
+
+    # Session-only mode: skip process/title/host matching
+    if session_only:
+        result = _match_session(session, config.sessions, cfg)
+        if result is None:
+            result = IconResult(icon=cfg.fallback_icon, source="fallback")
+        result.multi_pane_icon = cfg.multi_pane_icon if cfg.multi_pane_icon else None
+        return result
 
     # Get cmdline from PID if not provided directly
     effective_cmdline = cmdline
@@ -511,6 +522,11 @@ Examples:
         action="store_true",
         help="Show debug information on errors",
     )
+    parser.add_argument(
+        "--session-only",
+        action="store_true",
+        help="Only resolve session icon, skip process/title/host matching",
+    )
 
     args = parser.parse_args()
 
@@ -522,6 +538,7 @@ Examples:
             cmdline=args.cmdline,
             pane_pid=args.pane_pid,
             config_path=args.config,
+            session_only=args.session_only,
         )
 
         if args.simple:

@@ -22,6 +22,7 @@ title=""
 session=""
 panes=1
 pane_pid=""
+session_only=0
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -44,6 +45,11 @@ while [[ $# -gt 0 ]]; do
         --pane-pid)
             pane_pid="$2"
             shift 2
+            ;;
+        --session-icon)
+            # Session-only mode: only resolve session icon, skip process/title/host
+            session_only=1
+            shift
             ;;
         *)
             # Skip unknown arguments
@@ -73,6 +79,7 @@ get_icon() {
         --config "${config_path}"
     )
 
+    [[ "${session_only}" == "1" ]] && args+=(--session-only)
     [[ -n "${process}" ]] && args+=(--process "${process}")
     [[ -n "${title}" ]] && args+=(--title "${title}")
     [[ -n "${session}" ]] && args+=(--session "${session}")
