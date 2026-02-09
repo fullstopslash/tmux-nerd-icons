@@ -119,7 +119,7 @@ def get_config(config_path: str) -> ParsedConfig:
 
     # Reload if cache is empty, path changed, or file was modified
     cache_invalid = (
-        _config_cache is None or path != _config_path_cache or current_mtime > _config_mtime
+        _config_cache is None or path != _config_path_cache or current_mtime != _config_mtime
     )
 
     if cache_invalid:

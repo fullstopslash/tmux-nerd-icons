@@ -237,9 +237,13 @@ def get_foreground_cmdline(pane_pid: int) -> list[str]:
 
         # Field 8 (0-indexed: 7) is tpgid (foreground process group ID)
         # The format is: pid (comm) state ppid pgrp session tty_nr tpgid ...
-        # We need to handle the case where comm contains spaces or parentheses
-        fields = stat_content.split()
-        tpgid = int(fields[7])
+        # The comm field is in parens and can contain spaces/parens,
+        # so find the last ')' and split from there
+        close_paren = stat_content.rfind(")")
+        rest = stat_content[close_paren + 2 :]  # skip ') '
+        rest_fields = rest.split()
+        # rest_fields: state(0) ppid(1) pgrp(2) session(3) tty_nr(4) tpgid(5)
+        tpgid = int(rest_fields[5])
 
         # Read the command line of the foreground process
         cmdline_path = f"/proc/{tpgid}/cmdline"

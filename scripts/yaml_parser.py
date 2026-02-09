@@ -174,7 +174,13 @@ def _is_inline_yaml_value(rest: str) -> bool:
     Returns:
         True if this is an inline value, False if nested block
     """
-    return bool(rest) and not rest.startswith(("#", "|", ">", "{", "["))
+    if not rest:
+        return False
+    if rest[0] in ("|", ">", "{", "["):
+        return False
+    # Only treat # as comment if followed by space or alone;
+    # bare hex colors like #cdd6f4 are valid inline values
+    return not (rest[0] == "#" and (len(rest) == 1 or rest[1] == " "))
 
 
 def _validate_pattern_length(pattern: str, line_number: int) -> None:
@@ -372,28 +378,27 @@ def _parse_config_section(lines: list[str]) -> IconConfig:
     return config
 
 
-def _parse_icons_section(lines: list[str]) -> dict[str, str | dict[str, Any]]:
-    """Parse the icons: section.
+def _parse_nested_section(lines: list[str], section: str) -> dict[str, str | dict[str, Any]]:
+    """Parse a section with possible nested blocks (icons, hosts).
 
     Args:
         lines: Raw file lines
+        section: Section name to parse
 
     Returns:
-        Dictionary mapping app names to icons or nested config dicts
+        Dictionary mapping keys to icons or nested config dicts
     """
-    icons: dict[str, str | dict[str, Any]] = {}
+    result: dict[str, str | dict[str, Any]] = {}
 
-    for key, value, line_idx, indent in _iter_yaml_block(lines, "icons"):
+    for key, value, line_idx, indent in _iter_yaml_block(lines, section):
         if value is not None:
-            # Simple icon value
-            icons[key] = value
+            result[key] = value
         else:
-            # Nested block (icon, title patterns, colors)
             nested, _ = _parse_nested_block(lines, line_idx + 1, indent)
             if nested:
-                icons[key] = nested
+                result[key] = nested
 
-    return icons
+    return result
 
 
 def _parse_simple_section(lines: list[str], section: str) -> dict[str, str]:
@@ -413,30 +418,6 @@ def _parse_simple_section(lines: list[str], section: str) -> dict[str, str]:
             result[key] = value
 
     return result
-
-
-def _parse_hosts_section(lines: list[str]) -> dict[str, str | dict[str, Any]]:
-    """Parse the hosts: section.
-
-    Args:
-        lines: Raw file lines
-
-    Returns:
-        Dictionary mapping host patterns to icons or nested config dicts
-    """
-    hosts: dict[str, str | dict[str, Any]] = {}
-
-    for key, value, line_idx, indent in _iter_yaml_block(lines, "hosts"):
-        if value is not None:
-            # Simple icon value
-            hosts[key] = value
-        else:
-            # Nested block (icon, colors)
-            nested, _ = _parse_nested_block(lines, line_idx + 1, indent)
-            if nested:
-                hosts[key] = nested
-
-    return hosts
 
 
 def _parse_layout_glyphs(lines: list[str]) -> dict[str, str]:
@@ -506,10 +487,10 @@ def load_config_from_string(content: str) -> ParsedConfig:
 
     # Parse each section
     config = _parse_config_section(lines)
-    icons = _parse_icons_section(lines)
+    icons = _parse_nested_section(lines, "icons")
     title_icons = _parse_simple_section(lines, "title_icons")
     sessions = _parse_simple_section(lines, "sessions")
-    hosts = _parse_hosts_section(lines)
+    hosts = _parse_nested_section(lines, "hosts")
     layout_glyphs = _parse_layout_glyphs(lines)
 
     # Attach layout glyphs to config
