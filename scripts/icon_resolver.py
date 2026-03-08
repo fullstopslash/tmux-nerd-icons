@@ -63,6 +63,13 @@ if TYPE_CHECKING:
 # Maximum regex pattern length for ReDoS protection
 _MAX_PATTERN_LENGTH = 500
 
+# Pre-compiled token split patterns
+_TITLE_TOKEN_RE = re.compile(r"[^A-Za-z0-9._+-]+")
+_SESSION_TOKEN_RE = re.compile(r"[^A-Za-z0-9]+")
+
+# Glob metacharacters for skipping non-glob keys in host matching
+_GLOB_CHARS = frozenset("*?[")
+
 
 @dataclass
 class IconResult:
@@ -111,13 +118,13 @@ def get_config(config_path: str) -> ParsedConfig:
 
     path = os.path.expanduser(config_path)
 
-    # Check file modification time
+    # Check file modification time (-1.0 sentinel forces reload on stat failure)
     try:
         current_mtime = os.path.getmtime(path)
     except OSError:
-        current_mtime = 0.0
+        current_mtime = -1.0
 
-    # Reload if cache is empty, path changed, or file was modified
+    # Reload if cache is empty, path changed, file was modified, or stat failed
     cache_invalid = (
         _config_cache is None or path != _config_path_cache or current_mtime != _config_mtime
     )
@@ -144,7 +151,7 @@ def _match_host(
 
     Args:
         host: Hostname to match (lowercase).
-        hosts: Host configuration dictionary.
+        hosts: Host configuration dictionary (pre-lowercased keys).
         cfg: Global icon configuration for defaults.
 
     Returns:
@@ -152,42 +159,44 @@ def _match_host(
     """
     host_lower = host.lower()
 
+    # O(1) exact match (expects pre-lowercased keys)
+    if host_lower in hosts:
+        return _value_to_icon_result(hosts[host_lower], cfg, "host")
+
+    # Glob pattern fallback (skip non-glob keys already checked above)
     for pattern, value in hosts.items():
-        pattern_lower = pattern.lower()
-
-        # Check exact match first (fast path)
-        if pattern_lower == host_lower:
-            return _extract_host_result(value, cfg)
-
-        # Check glob pattern (supports *, ?, [seq], [!seq])
-        if fnmatch(host_lower, pattern_lower):
-            return _extract_host_result(value, cfg)
+        if _GLOB_CHARS.isdisjoint(pattern):
+            continue
+        if fnmatch(host_lower, pattern):
+            return _value_to_icon_result(value, cfg, "host")
 
     return None
 
 
-def _extract_host_result(
+def _value_to_icon_result(
     value: str | dict[str, Any],
     cfg: IconConfig,
+    source: str,
 ) -> IconResult:
-    """Extract IconResult from a host configuration value.
+    """Convert a config value (string or dict) to an IconResult.
 
     Args:
         value: Either a simple icon string or a dict with icon and colors.
         cfg: Global icon configuration for defaults.
+        source: Resolution source label (e.g. "host", "process").
 
     Returns:
-        IconResult with host source.
+        IconResult with the given source.
     """
     if isinstance(value, str):
-        return IconResult(icon=value, source="host")
+        return IconResult(icon=value, source=source)
 
     return IconResult(
         icon=value.get("icon", cfg.fallback_icon),
         ring_color=value.get("ring-color") or value.get("index-color"),
         icon_color=value.get("icon-color"),
         alert_color=value.get("alert-color"),
-        source="host",
+        source=source,
     )
 
 
@@ -252,7 +261,7 @@ def _match_title_icons(
 
     Args:
         title: Window title to match.
-        title_icons: Title icons configuration dictionary.
+        title_icons: Title icons configuration dictionary (pre-lowercased keys).
         cfg: Global icon configuration for defaults.
 
     Returns:
@@ -264,8 +273,7 @@ def _match_title_icons(
     title_lower = title.lower()
 
     # Tokenize title (split on non-alphanumeric characters, preserving ._+-)
-    tokens = re.split(r"[^A-Za-z0-9._+-]+", title_lower)
-    tokens = [t for t in tokens if t]
+    tokens = [t for t in _TITLE_TOKEN_RE.split(title_lower) if t]
 
     # Check each token against title_icons (fast lookup)
     for token in tokens:
@@ -274,7 +282,7 @@ def _match_title_icons(
 
     # Check if any title_icon key is a substring of the title
     for keyword, icon in title_icons.items():
-        if keyword.lower() in title_lower:
+        if keyword in title_lower:
             return IconResult(icon=icon, source="title_icon")
 
     return None
@@ -291,7 +299,7 @@ def _match_process(
 
     Args:
         process: Process name to match.
-        icons: Icons configuration dictionary.
+        icons: Icons configuration dictionary (pre-lowercased keys).
         cfg: Global icon configuration for defaults.
 
     Returns:
@@ -300,24 +308,12 @@ def _match_process(
     if not process:
         return None
 
-    process_lower = process.lower()
+    # O(1) lookup (expects pre-lowercased keys)
+    value = icons.get(process.lower())
+    if value is None:
+        return None
 
-    # Direct lookup (case-insensitive by using lowercase icons keys)
-    # Note: yaml_parser preserves case, so we need to search
-    for key, value in icons.items():
-        if key.lower() != process_lower:
-            continue
-
-        if isinstance(value, str):
-            return IconResult(icon=value, source="process")
-
-        return IconResult(
-            icon=value.get("icon", cfg.fallback_icon),
-            icon_color=value.get("icon-color"),
-            source="process",
-        )
-
-    return None
+    return _value_to_icon_result(value, cfg, "process")
 
 
 def _match_session(
@@ -332,7 +328,7 @@ def _match_session(
 
     Args:
         session: Tmux session name to match.
-        sessions: Sessions configuration dictionary.
+        sessions: Sessions configuration dictionary (pre-lowercased keys).
         cfg: Global icon configuration for defaults.
 
     Returns:
@@ -343,19 +339,10 @@ def _match_session(
 
     session_lower = session.lower()
 
-    # Tokenize session name (split on non-alphanumeric characters)
-    tokens = re.split(r"[^A-Za-z0-9]+", session_lower)
-    tokens = [t for t in tokens if t]
-
-    # Check each token against sessions
-    for token in tokens:
-        if token in sessions:
+    # O(1) lookup per token (expects pre-lowercased keys)
+    for token in _SESSION_TOKEN_RE.split(session_lower):
+        if token and token in sessions:
             return IconResult(icon=sessions[token], source="session")
-
-        # Also check lowercase keys for case-insensitive match
-        for key, icon in sessions.items():
-            if key.lower() == token:
-                return IconResult(icon=icon, source="session")
 
     return None
 
@@ -400,7 +387,7 @@ def resolve_icon(
 
     # Session-only mode: skip process/title/host matching
     if session_only:
-        result = _match_session(session, config.sessions, cfg)
+        result = _match_session(session, config.sessions_lower, cfg)
         if result is None:
             result = IconResult(icon=cfg.fallback_icon, source="fallback")
         result.multi_pane_icon = cfg.multi_pane_icon if cfg.multi_pane_icon else None
@@ -420,23 +407,23 @@ def resolve_icon(
     # Priority 1: Host icon (if prefer-host-icon is enabled and SSH detected)
     result: IconResult | None = None
     if cfg.prefer_host_icon and ssh_host:
-        result = _match_host(ssh_host, config.hosts, cfg)
+        result = _match_host(ssh_host, config.hosts_lower, cfg)
 
     # Priority 2: Title patterns within app definitions
     if result is None:
-        result = _match_title_patterns(title, config.icons, cfg)
+        result = _match_title_patterns(title, config.icons_lower, cfg)
 
     # Priority 3: Title icons for TUI apps
     if result is None:
-        result = _match_title_icons(title, config.title_icons, cfg)
+        result = _match_title_icons(title, config.title_icons_lower, cfg)
 
     # Priority 4: Process name match
     if result is None:
-        result = _match_process(process, config.icons, cfg)
+        result = _match_process(process, config.icons_lower, cfg)
 
     # Priority 5: Session keywords
     if result is None:
-        result = _match_session(session, config.sessions, cfg)
+        result = _match_session(session, config.sessions_lower, cfg)
 
     # Priority 6: Fallback icon
     if result is None:
@@ -512,10 +499,16 @@ Examples:
         default="~/.config/nerd-icons/config.yml",
         help="Path to configuration file",
     )
-    parser.add_argument(
+    output_mode = parser.add_mutually_exclusive_group()
+    output_mode.add_argument(
         "--simple",
         action="store_true",
         help="Output just the icon character (no JSON)",
+    )
+    output_mode.add_argument(
+        "--tsv",
+        action="store_true",
+        help="Output icon and multi_pane_icon as tab-separated values",
     )
     parser.add_argument(
         "--debug",
@@ -543,6 +536,8 @@ Examples:
 
         if args.simple:
             print(result.icon)
+        elif args.tsv:
+            print(f"{result.icon}\t{result.multi_pane_icon or ''}")
         else:
             print(json.dumps(asdict(result), ensure_ascii=False))
 

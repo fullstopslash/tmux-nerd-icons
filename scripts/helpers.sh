@@ -39,12 +39,10 @@ get_tmux_option() {
     local default_value="$2"
     local option_value
 
-    option_value=$(tmux show-option -gqv "${option}" 2>/dev/null)
-
-    if [[ -n "${option_value}" ]]; then
-        echo "${option_value}"
+    if option_value=$(tmux show-option -gqv "${option}" 2>/dev/null) && [[ -n "${option_value}" ]]; then
+        printf '%s\n' "${option_value}"
     else
-        echo "${default_value}"
+        printf '%s\n' "${default_value}"
     fi
 }
 

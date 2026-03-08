@@ -8,13 +8,14 @@
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 
-set -euo pipefail
+set -uo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-readonly SCRIPT_DIR
 
 # shellcheck source=scripts/helpers.sh
 source "${SCRIPT_DIR}/helpers.sh"
+
+FALLBACK_ICON="󰽙"
 
 # Parse command-line arguments
 process=""
@@ -26,33 +27,27 @@ session_only=0
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
-        --process)
-            process="$2"
-            shift 2
-            ;;
-        --title)
-            title="$2"
-            shift 2
-            ;;
-        --session)
-            session="$2"
-            shift 2
-            ;;
-        --panes)
-            panes="$2"
-            shift 2
-            ;;
-        --pane-pid)
-            pane_pid="$2"
+        --process|--title|--session|--panes|--pane-pid)
+            if [[ $# -lt 2 ]]; then
+                log_error "$1 requires a value"
+                shift
+                break
+            fi
+            case "$1" in
+                --process)  process="$2" ;;
+                --title)    title="$2" ;;
+                --session)  session="$2" ;;
+                --panes)    panes="$2" ;;
+                --pane-pid) pane_pid="$2" ;;
+            esac
             shift 2
             ;;
         --session-icon)
-            # Session-only mode: only resolve session icon, skip process/title/host
             session_only=1
             shift
             ;;
         *)
-            # Skip unknown arguments
+            log_warn "Unknown argument: $1"
             shift
             ;;
     esac
@@ -61,22 +56,18 @@ done
 # get_icon - Get icon from Python resolver
 get_icon() {
     local python
-    set +e
-    python=$(get_python)
-    local get_python_result=$?
-    set -e
-
-    if [[ ${get_python_result} -ne 0 ]]; then
-        echo '{"icon":"󰽙","multi_pane_icon":null}'
+    if ! python=$(get_python); then
+        printf '%s\t\n' "${FALLBACK_ICON}"
         return
     fi
 
     local config_path
-    config_path=$(get_config_path)
+    config_path=$(get_config_path) || config_path="${HOME}/.config/nerd-icons/config.yml"
 
     local args=(
         "${SCRIPT_DIR}/icon_resolver.py"
         --config "${config_path}"
+        --tsv
     )
 
     [[ "${session_only}" == "1" ]] && args+=(--session-only)
@@ -85,39 +76,25 @@ get_icon() {
     [[ -n "${session}" ]] && args+=(--session "${session}")
     [[ -n "${pane_pid}" ]] && args+=(--pane-pid "${pane_pid}")
 
-    "${python}" "${args[@]}" 2>/dev/null || echo '{"icon":"󰽙","multi_pane_icon":null}'
-}
-
-# extract_json_field - Extract a field from JSON string
-extract_json_field() {
-    local json="$1"
-    local field="$2"
-
-    local value
-    value=$(echo "${json}" | grep -o "\"${field}\"[[:space:]]*:[[:space:]]*\"[^\"]*\"" | sed 's/.*: *"\([^"]*\)".*/\1/' | head -1)
-
-    echo "${value}"
+    "${python}" "${args[@]}" 2>/dev/null || printf '%s\t\n' "${FALLBACK_ICON}"
 }
 
 # Main execution
 main() {
-    local json_result
-    json_result=$(get_icon)
+    local result
+    result=$(get_icon)
 
-    local icon
-    icon=$(extract_json_field "${json_result}" "icon")
-    [[ -z "${icon}" ]] && icon="󰽙"
-
-    local multi_pane_icon
-    multi_pane_icon=$(extract_json_field "${json_result}" "multi_pane_icon")
+    local icon multi_pane_icon
+    IFS=$'\t' read -r icon multi_pane_icon <<< "${result}"
+    [[ -z "${icon}" ]] && icon="${FALLBACK_ICON}"
 
     # Output just the icon (colors/ring handled by user's window-status-format)
     local output="${icon}"
-    if [[ "${panes}" -gt 1 && -n "${multi_pane_icon}" ]]; then
+    if [[ "${panes}" =~ ^[0-9]+$ && "${panes}" -gt 1 && -n "${multi_pane_icon}" ]]; then
         output="${multi_pane_icon} ${icon}"
     fi
 
-    echo "${output}"
+    printf '%s\n' "${output}"
 }
 
 main

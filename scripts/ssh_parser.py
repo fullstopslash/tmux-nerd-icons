@@ -47,6 +47,7 @@ _SSH_OPTIONS_WITH_ARG: frozenset[str] = frozenset(
         "-c",  # cipher spec
         "-D",  # dynamic port forward
         "-E",  # log file
+        "-e",  # escape character
         "-F",  # config file
         "-I",  # PKCS#11 shared library
         "-i",  # identity file
@@ -154,12 +155,9 @@ def _take_first_non_option(args: list[str]) -> str | None:
                 i += 2
                 continue
 
-            # Check for combined option+value (e.g., -i/path/to/key or -p22)
-            for opt in _SSH_OPTIONS_WITH_ARG:
-                if arg.startswith(opt) and len(arg) > len(opt):
-                    # Argument is attached to option, just skip this one
-                    i += 1
-                    break
+            # Check for combined option+value (e.g., -p22, -oFoo=bar)
+            if len(arg) > 2 and arg[:2] in _SSH_OPTIONS_WITH_ARG:
+                i += 1
             else:
                 # Regular flag without argument (e.g., -v, -A, -X)
                 i += 1
@@ -171,14 +169,14 @@ def _take_first_non_option(args: list[str]) -> str | None:
     return None
 
 
-def _normalize_hostname(host: str) -> str:
+def _normalize_hostname(host: str) -> str | None:
     """Normalize a hostname by stripping user@, IPv6 brackets, and port.
 
     Args:
         host: Raw hostname that may include user prefix, brackets, or port.
 
     Returns:
-        Normalized lowercase hostname.
+        Normalized lowercase hostname, or None if empty after normalization.
 
     Examples:
         >>> _normalize_hostname("user@host")
@@ -204,14 +202,12 @@ def _normalize_hostname(host: str) -> str:
         bracket_end = host.find("]")
         # Extract IPv6 address from brackets, or strip leading [ if malformed
         host = host[1:bracket_end] if bracket_end > 0 else host[1:]
-    elif ":" in host:
-        # IPv4 with port suffix - strip port
-        # Note: IPv6 without brackets would also have colons, but that's
-        # technically malformed SSH syntax; we handle it gracefully by
-        # only stripping what looks like host:port
+    elif host.count(":") == 1:
+        # Exactly one colon: IPv4 with port suffix (host:port) -- strip port
+        # Multiple colons indicate IPv6 without brackets; leave those intact
         host = host.split(":", 1)[0]
 
-    return host.lower()
+    return host.lower() or None
 
 
 def get_foreground_cmdline(pane_pid: int) -> list[str]:
@@ -232,7 +228,7 @@ def get_foreground_cmdline(pane_pid: int) -> list[str]:
     try:
         # Read the stat file to get the foreground process group ID
         stat_path = f"/proc/{pane_pid}/stat"
-        with open(stat_path, encoding="utf-8") as f:
+        with open(stat_path, encoding="utf-8", errors="replace") as f:
             stat_content = f.read()
 
         # Field 8 (0-indexed: 7) is tpgid (foreground process group ID)

@@ -29,7 +29,6 @@ for parsing the nerd-icons configuration format. It supports:
 
 Security features:
 - File size limit (1MB max)
-- Regex pattern length limit (500 chars for ReDoS protection)
 
 Example usage:
     from yaml_parser import load_config
@@ -49,7 +48,6 @@ from typing import Any
 
 # Security limits
 MAX_CONFIG_SIZE = 1024 * 1024  # 1MB
-MAX_REGEX_LENGTH = 500  # ReDoS protection
 
 
 @dataclass
@@ -77,6 +75,12 @@ class ParsedConfig:
     title_icons: dict[str, str]
     sessions: dict[str, str]
     hosts: dict[str, str | dict[str, Any]]
+
+    # Pre-lowercased lookup dicts (computed once at load time)
+    icons_lower: dict[str, str | dict[str, Any]] = field(default_factory=dict, repr=False)
+    title_icons_lower: dict[str, str] = field(default_factory=dict, repr=False)
+    sessions_lower: dict[str, str] = field(default_factory=dict, repr=False)
+    hosts_lower: dict[str, str | dict[str, Any]] = field(default_factory=dict, repr=False)
 
 
 class YamlParseError(ValueError):
@@ -106,13 +110,18 @@ def _strip_yaml_value(val: str) -> str:
     """
     val = val.strip()
 
-    # Remove inline comments (space + #)
+    # Handle quoted strings: find closing quote, then strip comments after it
+    if val and val[0] in ('"', "'"):
+        quote = val[0]
+        end = val.find(quote, 1)
+        if end > 0:
+            # Return content between quotes; ignore anything after closing quote
+            return val[1:end]
+        # No closing quote -- fall through to unquoted handling
+
+    # Unquoted value: strip inline comments (space + #)
     if " #" in val:
         val = val.split(" #", 1)[0].strip()
-
-    # Remove surrounding quotes (single or double)
-    if val and len(val) >= 2 and val[0] in ('"', "'") and val[-1] == val[0]:
-        val = val[1:-1]
 
     return val
 
@@ -144,8 +153,15 @@ def _get_indent_level(line: str) -> int:
 
     Returns:
         Number of leading spaces
+
+    Raises:
+        YamlParseError: If tabs are used for indentation
     """
-    return len(line) - len(line.lstrip())
+    stripped = line.lstrip()
+    indent = len(line) - len(stripped)
+    if indent > 0 and "\t" in line[:indent]:
+        raise YamlParseError("Tabs are not allowed for indentation, use spaces")
+    return indent
 
 
 def _parse_bool(val: str) -> bool:
@@ -183,23 +199,6 @@ def _is_inline_yaml_value(rest: str) -> bool:
     return not (rest[0] == "#" and (len(rest) == 1 or rest[1] == " "))
 
 
-def _validate_pattern_length(pattern: str, line_number: int) -> None:
-    """Validate regex pattern length for ReDoS protection.
-
-    Args:
-        pattern: Regex pattern string
-        line_number: Line number for error reporting
-
-    Raises:
-        YamlParseError: If pattern exceeds maximum length
-    """
-    if len(pattern) > MAX_REGEX_LENGTH:
-        raise YamlParseError(
-            f"Regex pattern too long ({len(pattern)} chars, max {MAX_REGEX_LENGTH})",
-            line_number,
-        )
-
-
 def _iter_yaml_block(
     lines: list[str],
     block_label: str,
@@ -229,8 +228,8 @@ def _iter_yaml_block(
                 in_block = True
             continue
 
-        # Skip empty lines and comments
-        if not stripped or stripped.startswith("#"):
+        # Skip empty lines, comments, and YAML document markers
+        if not stripped or stripped.startswith("#") or stripped in ("---", "..."):
             continue
 
         current_indent = _get_indent_level(raw)
@@ -456,17 +455,14 @@ def load_config(path: str) -> ParsedConfig:
     """
     path = os.path.expanduser(path)
 
-    # Security: check file size before reading
     try:
-        size = os.path.getsize(path)
+        with open(path, encoding="utf-8") as f:
+            content = f.read(MAX_CONFIG_SIZE + 1)
     except OSError as e:
         raise FileNotFoundError(f"Cannot access config file: {path}") from e
 
-    if size > MAX_CONFIG_SIZE:
-        raise ValueError(f"Config file too large: {size} bytes (max {MAX_CONFIG_SIZE})")
-
-    with open(path, encoding="utf-8") as f:
-        content = f.read()
+    if len(content) > MAX_CONFIG_SIZE:
+        raise ValueError(f"Config file too large (max {MAX_CONFIG_SIZE} bytes)")
 
     return load_config_from_string(content)
 
@@ -502,6 +498,10 @@ def load_config_from_string(content: str) -> ParsedConfig:
         title_icons=title_icons,
         sessions=sessions,
         hosts=hosts,
+        icons_lower={k.lower(): v for k, v in icons.items()},
+        title_icons_lower={k.lower(): v for k, v in title_icons.items()},
+        sessions_lower={k.lower(): v for k, v in sessions.items()},
+        hosts_lower={k.lower(): v for k, v in hosts.items()},
     )
 
 
