@@ -53,7 +53,7 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-# get_icon - Get icon from Python resolver
+# get_icon - Get icon from Python resolver (vendored nerd_icons package)
 get_icon() {
     local python
     if ! python=$(get_python); then
@@ -65,7 +65,7 @@ get_icon() {
     config_path=$(get_config_path) || config_path="${HOME}/.config/nerd-icons/config.yml"
 
     local args=(
-        "${SCRIPT_DIR}/icon_resolver.py"
+        -m nerd_icons
         --config "${config_path}"
         --tsv
     )
@@ -76,7 +76,7 @@ get_icon() {
     [[ -n "${session}" ]] && args+=(--session "${session}")
     [[ -n "${pane_pid}" ]] && args+=(--pane-pid "${pane_pid}")
 
-    "${python}" "${args[@]}" 2>/dev/null || printf '%s\t\n' "${FALLBACK_ICON}"
+    PYTHONPATH="${SCRIPT_DIR}" "${python}" "${args[@]}" 2>/dev/null || printf '%s\t\n' "${FALLBACK_ICON}"
 }
 
 # Main execution
