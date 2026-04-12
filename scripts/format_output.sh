@@ -53,30 +53,39 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-# get_icon - Get icon from Python resolver (vendored nerd_icons package)
+# get_icon - Get icon from nerd-icons resolver (Rust binary or Python fallback)
 get_icon() {
-    local python
-    if ! python=$(get_python); then
-        printf '%s\t\n' "${FALLBACK_ICON}"
-        return
-    fi
-
     local config_path
     config_path=$(get_config_path) || config_path="${HOME}/.config/nerd-icons/config.yml"
 
     local args=(
-        -m nerd_icons
         --config "${config_path}"
         --tsv
     )
-
     [[ "${session_only}" == "1" ]] && args+=(--session-only)
     [[ -n "${process}" ]] && args+=(--process "${process}")
     [[ -n "${title}" ]] && args+=(--title "${title}")
     [[ -n "${session}" ]] && args+=(--session "${session}")
     [[ -n "${pane_pid}" ]] && args+=(--pane-pid "${pane_pid}")
 
-    PYTHONPATH="${SCRIPT_DIR}" "${python}" "${args[@]}" 2>/dev/null || printf '%s\t\n' "${FALLBACK_ICON}"
+    # Try Rust binary first (1ms vs 30ms Python)
+    local bin
+    for bin in \
+        nerd-icons \
+        "${HOME}/.cargo/bin/nerd-icons" \
+        "${HOME}/.local/bin/nerd-icons"; do
+        if command -v "${bin}" >/dev/null 2>&1 || [[ -x "${bin}" ]]; then
+            "${bin}" "${args[@]}" 2>/dev/null && return
+        fi
+    done
+
+    # Fallback to Python
+    local python
+    if ! python=$(get_python); then
+        printf '%s\t\n' "${FALLBACK_ICON}"
+        return
+    fi
+    PYTHONPATH="${SCRIPT_DIR}" "${python}" -m nerd_icons "${args[@]}" 2>/dev/null || printf '%s\t\n' "${FALLBACK_ICON}"
 }
 
 # Main execution
