@@ -244,6 +244,19 @@ def _match_session(
     return None
 
 
+def _apply_host_colors(result: IconResult, host_result: IconResult | None) -> IconResult:
+    """Apply host colors onto a resolved result (for host-colors-only mode)."""
+    if host_result is None:
+        return result
+    if host_result.icon_color:
+        result.icon_color = host_result.icon_color
+    if host_result.ring_color:
+        result.ring_color = host_result.ring_color
+    if host_result.alert_color:
+        result.alert_color = host_result.alert_color
+    return result
+
+
 def resolve_icon(
     process: str = "",
     title: str = "",
@@ -271,36 +284,37 @@ def resolve_icon(
     cfg = config.config
     fallback = cfg.fallback_icon
 
-    # Step 1: Host icon
-    if cfg.prefer_host_icon and hostname:
-        result = _match_host(hostname, config.hosts, config.hosts_lower, fallback)
-        if result is not None:
-            return result
+    # Step 1: Host icon/colors
+    host_result = None
+    if hostname:
+        host_result = _match_host(hostname, config.hosts, config.hosts_lower, fallback)
+        if host_result is not None and cfg.prefer_host_icon and not cfg.host_colors_only:
+            return host_result
 
     # Step 2: Compound match (icons entry + title sub-map regex)
     result = _match_compound(process, title, config.icons, fallback)
     if result is not None:
-        return result
+        return _apply_host_colors(result, host_result)
 
     # Step 3: Icons with match: "any"/"title" matched via title token
     result = _match_title_via_icons(title, config.icons, fallback)
     if result is not None:
-        return result
+        return _apply_host_colors(result, host_result)
 
     # Step 4: Title icons
     result = _match_title_icons(title, config.title_icons)
     if result is not None:
-        return result
+        return _apply_host_colors(result, host_result)
 
     # Step 5: Simple process match
     result = _match_process(process, title, config.icons, fallback)
     if result is not None:
-        return result
+        return _apply_host_colors(result, host_result)
 
     # Step 6: Session keyword
     result = _match_session(session, config.sessions)
     if result is not None:
-        return result
+        return _apply_host_colors(result, host_result)
 
     # Step 7: Fallback
-    return IconResult(icon=fallback, source="fallback")
+    return _apply_host_colors(IconResult(icon=fallback, source="fallback"), host_result)
