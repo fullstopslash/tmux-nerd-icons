@@ -1,19 +1,26 @@
 #!/usr/bin/env bash
 # nerd-icons.tmux - TPM entry point for tmux-nerd-icons
 #
-# Sets window icons via automatic-rename and optionally renders a
-# powerline bubble tab bar using native tmux format strings.
+# Sets window icons via automatic-rename and renders a powerline bubble
+# tab bar using native tmux format strings. Zero shell overhead for
+# rendering — only the icon resolution uses #() with the nerd-icons binary.
 #
-# Options (set before loading plugin):
-#   @nerd_icons_bubble_bar  "on"|"off"  Enable bubble bar (default: on)
-#   @nerd_icons_act_bg      colour      Active tab bg (default: colour232)
-#   @nerd_icons_inact_bg    colour      Inactive tab bg (default: colour235)
-#   @nerd_icons_ring_active colour      Ring color active (default: colour99)
-#   @nerd_icons_ring_inactive colour    Ring color inactive (default: colour237)
-#   @nerd_icons_icon_color  colour      Icon color (default: colour39)
-#   @nerd_icons_bubble_sep  colour      Soft separator color (default: colour236)
-#   @nerd_icons_act_fg      colour      Active tab fg (default: colour252)
-#   @nerd_icons_inact_fg    colour      Inactive tab fg (default: colour245)
+# Requires these tmux @options to be set (with PowerLine glyphs):
+#   @SEPARATOR_TAB_LEFT    U+E0B6  (endcaps + active bubble left)
+#   @SEPARATOR_TAB_RIGHT   U+E0B4  (endcaps + active bubble right)
+#   @SEPARATOR_SOFT_LEFT   U+E0B7  (between inactive tabs, points left)
+#   @SEPARATOR_SOFT_RIGHT  U+E0B5  (between inactive tabs, points right)
+#
+# Plugin options (set before loading):
+#   @nerd_icons_bubble_bar     "on"|"off"  (default: on)
+#   @nerd_icons_act_bg         colour      (default: colour232)
+#   @nerd_icons_inact_bg       colour      (default: colour235)
+#   @nerd_icons_ring_active    colour      (default: colour99)
+#   @nerd_icons_ring_inactive  colour      (default: colour237)
+#   @nerd_icons_icon_color     colour      (default: colour39)
+#   @nerd_icons_bubble_sep     colour      (default: colour236)
+#   @nerd_icons_act_fg         colour      (default: colour252)
+#   @nerd_icons_inact_fg       colour      (default: colour245)
 
 set -euo pipefail
 
@@ -22,7 +29,6 @@ CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck source=scripts/helpers.sh
 source "${CURRENT_DIR}/scripts/helpers.sh"
 
-# Read a tmux option with default
 opt() {
     local val
     val=$(tmux show-option -gqv "$1" 2>/dev/null) || true
@@ -41,75 +47,84 @@ main() {
     tmux set-option -g automatic-rename on
     tmux set-option -g automatic-rename-format "#(${icon_cmd})"
 
-    # ── Bubble bar (native format strings) ────────────────────
+    # ── Bubble bar ────────────────────────────────────────────
     local bubble_bar
     bubble_bar=$(opt "@nerd_icons_bubble_bar" "on")
     [[ "$bubble_bar" != "on" ]] && return
 
-    # Read colors from tmux options
-    local act_bg inact_bg ring_act ring_inact icon_color bubble_sep act_fg inact_fg
-    act_bg=$(opt "@nerd_icons_act_bg" "colour232")
-    inact_bg=$(opt "@nerd_icons_inact_bg" "colour235")
-    ring_act=$(opt "@nerd_icons_ring_active" "colour99")
-    ring_inact=$(opt "@nerd_icons_ring_inactive" "colour237")
-    icon_color=$(opt "@nerd_icons_icon_color" "colour39")
-    bubble_sep=$(opt "@nerd_icons_bubble_sep" "colour236")
-    act_fg=$(opt "@nerd_icons_act_fg" "colour252")
-    inact_fg=$(opt "@nerd_icons_inact_fg" "colour245")
+    local ab ib ra ri ic bs af nf
+    ab=$(opt "@nerd_icons_act_bg" "colour232")
+    ib=$(opt "@nerd_icons_inact_bg" "colour235")
+    ra=$(opt "@nerd_icons_ring_active" "colour99")
+    ri=$(opt "@nerd_icons_ring_inactive" "colour237")
+    ic=$(opt "@nerd_icons_icon_color" "colour39")
+    bs=$(opt "@nerd_icons_bubble_sep" "colour236")
+    af=$(opt "@nerd_icons_act_fg" "colour252")
+    nf=$(opt "@nerd_icons_inact_fg" "colour245")
 
-    # Separator glyphs (hex-escaped to survive editors)
-    local sep_l sep_r
-    sep_l=$'\xee\x82\xb6'  # U+E0B6  left half-circle
-    sep_r=$'\xee\x82\xb4'  # U+E0B4  right half-circle
+    # Separator references (use @options that contain the actual glyphs)
+    local TL='#{@SEPARATOR_TAB_LEFT}'   # U+E0B6
+    local TR='#{@SEPARATOR_TAB_RIGHT}'  # U+E0B4
+    local SL='#{@SEPARATOR_SOFT_LEFT}'  # U+E0B7
+    local SR='#{@SEPARATOR_SOFT_RIGHT}' # U+E0B5
 
-    # Ring symbol index mapping (nerd font circled numbers 1-10)
-    local ring
-    ring="#{?#{==:#I,1},$'\xf3\xb0\xac\xba'"
-    ring+=",#{?#{==:#I,2},$'\xf3\xb0\xac\xbb'"
-    ring+=",#{?#{==:#I,3},$'\xf3\xb0\xac\xbc'"
-    ring+=",#{?#{==:#I,4},$'\xf3\xb0\xac\xbd'"
-    ring+=",#{?#{==:#I,5},$'\xf3\xb0\xac\xbe'"
-    ring+=",#{?#{==:#I,6},$'\xf3\xb0\xac\xbf'"
-    ring+=",#{?#{==:#I,7},$'\xf3\xb0\xad\x80'"
-    ring+=",#{?#{==:#I,8},$'\xf3\xb0\xad\x81'"
-    ring+=",#{?#{==:#I,9},$'\xf3\xb0\xad\x82'"
-    ring+=",#{?#{==:#I,10},$'\xf3\xb0\xbf\xa9'"
-    ring+=",#I}}}}}}}}}}"
+    # Ring symbol mapping (window index → nerd font circled number)
+    # Uses @RING_* options if set, otherwise falls back to #I
+    # Set ring glyphs as tmux options so they survive format storage
+    tmux set-option -gq @RING_1  $'\xf3\xb0\xac\xba'
+    tmux set-option -gq @RING_2  $'\xf3\xb0\xac\xbb'
+    tmux set-option -gq @RING_3  $'\xf3\xb0\xac\xbc'
+    tmux set-option -gq @RING_4  $'\xf3\xb0\xac\xbd'
+    tmux set-option -gq @RING_5  $'\xf3\xb0\xac\xbe'
+    tmux set-option -gq @RING_6  $'\xf3\xb0\xac\xbf'
+    tmux set-option -gq @RING_7  $'\xf3\xb0\xad\x80'
+    tmux set-option -gq @RING_8  $'\xf3\xb0\xad\x81'
+    tmux set-option -gq @RING_9  $'\xf3\xb0\xad\x82'
+    tmux set-option -gq @RING_10 $'\xf3\xb0\xbf\xa9'
+
+    local RING='#{?#{==:#I,1},#{@RING_1},#{?#{==:#I,2},#{@RING_2},#{?#{==:#I,3},#{@RING_3},#{?#{==:#I,4},#{@RING_4},#{?#{==:#I,5},#{@RING_5},#{?#{==:#I,6},#{@RING_6},#{?#{==:#I,7},#{@RING_7},#{?#{==:#I,8},#{@RING_8},#{?#{==:#I,9},#{@RING_9},#{?#{==:#I,10},#{@RING_10},#I}}}}}}}}}}'
 
     # ── Active window format ──────────────────────────────────
-    # Structure: SEP_L SPACE RING ICON SPACE SPACE SEP_R
-    # Left sep bg: inact_bg if prev exists, default if first
-    # Right sep bg: inact_bg if next exists, default if last
-    # Ring color: prefix(13) > zoomed(161) > bell(196) > default
-    local active_fmt=""
-    active_fmt+="#{?#{window_start_flag},#[fg=${act_bg},bg=default],#[fg=${act_bg},bg=${inact_bg}]}${sep_l}"
-    active_fmt+="#[bg=${act_bg}]#{?client_prefix,#[fg=colour13],#{?window_zoomed_flag,#[fg=colour161],#[fg=${ring_act}]}} ${ring}"
-    active_fmt+="#[fg=${icon_color}]#W  "
-    active_fmt+="#{?#{window_end_flag},#[fg=${act_bg},bg=default],#[fg=${act_bg},bg=${inact_bg}]}${sep_r}"
+    # Left sep: bg=inact if prev, bg=default if first
+    # Ring: prefix(13) > zoomed(161) > default
+    # Content: RING ICON(#W)
+    # Right sep: bg=inact if next, bg=default if last
+    local ACTIVE=""
+    ACTIVE+="#{?#{window_start_flag},#[fg=${ab}#,bg=default],#[fg=${ab}#,bg=${ib}]}${TL}"
+    ACTIVE+="#[bg=${ab}]#{?client_prefix,#[fg=colour13],#{?window_zoomed_flag,#[fg=colour161],#[fg=${ra}]}} ${RING}"
+    ACTIVE+="#[fg=${ic}]#W  "
+    ACTIVE+="#{?#{window_end_flag},#[fg=${ab}#,bg=default],#[fg=${ab}#,bg=${ib}]}${TR}"
 
     # ── Inactive window format ────────────────────────────────
-    # Before active: left sep (endcap if first, bubble if not-first) + content + no right sep
-    # After active: no left sep + content + right sep (endcap if last, bubble if not-last)
+    # Before active: left sep + content (no right sep — active handles it)
+    # After active: content + right sep (no left sep — active handled it)
     #
-    # Left separator (before-active only):
-    #   first → endcap: fg=inact_bg, bg=default, SEP_L
-    #   not-first → bubble: fg=bubble_sep, bg=inact_bg, SEP_L (pointing away from active)
-    local left_sep="#{?#{e|<:#I,#{active_window_index}},#{?#{window_start_flag},#[fg=${inact_bg},bg=default]${sep_l},#[fg=${bubble_sep},bg=${inact_bg}]${sep_l}},}"
+    # Left sep (before-active only):
+    #   first: endcap TL (fg=ib, bg=default)
+    #   not-first: soft SL (fg=bs, bg=ib) — points away from active
+    local LEFT_FIRST="#[fg=${ib}#,bg=default]${TL}"
+    local LEFT_MID="#[fg=${bs}#,bg=${ib}]${SL}"
+    local LEFT="#{?#{e|<:#I,#{active_window_index}},#{?#{window_start_flag},${LEFT_FIRST},${LEFT_MID}},}"
 
-    # Content: ring(bell>activity>default) + icon(#W)
-    local content="#[bg=${inact_bg}]#{?#{window_bell_flag},#[fg=colour196],#{?#{window_activity_flag},#[fg=colour75],#[fg=${ring_inact}]}} ${ring}#[fg=${icon_color}]#W#[fg=${inact_fg}]  "
+    # Content (all inactive)
+    local CONTENT=""
+    CONTENT+="#[bg=${ib}]#{?#{window_bell_flag},#[fg=colour196],#{?#{window_activity_flag},#[fg=colour75],#[fg=${ri}]}} ${RING}"
+    CONTENT+="#[fg=${ic}]#W"
+    CONTENT+="#[fg=${nf}]  "
 
-    # Right separator (after-active only):
-    #   last → endcap: fg=inact_bg, bg=default, SEP_R
-    #   not-last → bubble: fg=bubble_sep, bg=inact_bg, SEP_R (pointing away from active)
-    local right_sep="#{?#{e|>:#I,#{active_window_index}},#{?#{window_end_flag},#[fg=${inact_bg},bg=default]${sep_r},#[fg=${bubble_sep},bg=${inact_bg}]${sep_r}},}"
+    # Right sep (after-active only):
+    #   last: endcap TR (fg=ib, bg=default)
+    #   not-last: soft SR (fg=bs, bg=ib) — points away from active
+    local RIGHT_LAST="#[fg=${ib}#,bg=default]${TR}"
+    local RIGHT_MID="#[fg=${bs}#,bg=${ib}]${SR}"
+    local RIGHT="#{?#{e|>:#I,#{active_window_index}},#{?#{window_end_flag},${RIGHT_LAST},${RIGHT_MID}},}"
 
-    local inactive_fmt="${left_sep}${content}${right_sep}"
+    local INACTIVE="${LEFT}${CONTENT}${RIGHT}"
 
     # ── Apply ─────────────────────────────────────────────────
     tmux set-window-option -g window-status-separator ''
-    tmux set-window-option -g window-status-current-format "$active_fmt"
-    tmux set-window-option -g window-status-format "$inactive_fmt"
+    tmux set-window-option -g window-status-current-format "${ACTIVE}"
+    tmux set-window-option -g window-status-format "${INACTIVE}"
 }
 
 main "$@"
