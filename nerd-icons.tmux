@@ -19,7 +19,6 @@
 #   @nerd_icons_ring_inactive  colour      (default: colour237)
 #   @nerd_icons_icon_color     colour      (default: colour39)
 #   @nerd_icons_bubble_sep     colour      (default: colour236)
-#   @nerd_icons_act_fg         colour      (default: colour252)
 #   @nerd_icons_inact_fg       colour      (default: colour245)
 
 set -euo pipefail
@@ -52,14 +51,13 @@ main() {
     bubble_bar=$(opt "@nerd_icons_bubble_bar" "on")
     [[ "$bubble_bar" != "on" ]] && return
 
-    local ab ib ra ri ic bs af nf
+    local ab ib ra ri ic bs nf
     ab=$(opt "@nerd_icons_act_bg" "colour232")
     ib=$(opt "@nerd_icons_inact_bg" "colour235")
     ra=$(opt "@nerd_icons_ring_active" "colour99")
     ri=$(opt "@nerd_icons_ring_inactive" "colour237")
     ic=$(opt "@nerd_icons_icon_color" "colour39")
     bs=$(opt "@nerd_icons_bubble_sep" "colour236")
-    af=$(opt "@nerd_icons_act_fg" "colour252")
     nf=$(opt "@nerd_icons_inact_fg" "colour245")
 
     # Separator references (use @options that contain the actual glyphs)
