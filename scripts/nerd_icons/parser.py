@@ -34,6 +34,7 @@ class IconConfig:
     alert_color: str = ""
     use_title_as_hostname: bool = False
     host_colors_only: bool = False
+    prefer_session_icon: bool = True
     multi_pane_icon: str = ""
     layout_glyphs: dict[str, str] = field(default_factory=dict)
 
@@ -260,6 +261,8 @@ def _parse_config_section(lines: list[str]) -> IconConfig:
             config.use_title_as_hostname = _parse_bool(value)
         elif norm_key == "host_colors_only":
             config.host_colors_only = _parse_bool(value)
+        elif norm_key == "prefer_session_icon":
+            config.prefer_session_icon = _parse_bool(value)
         elif norm_key == "multi_pane_icon" and value:
             config.multi_pane_icon = value
 
