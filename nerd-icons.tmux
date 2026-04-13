@@ -46,6 +46,12 @@ main() {
     tmux set-option -g automatic-rename on
     tmux set-option -g automatic-rename-format "#(${icon_cmd})"
 
+    # Force auto-rename on all existing windows (tmuxp disables it per-window)
+    tmux list-windows -a -F '#{session_name}:#{window_index}' 2>/dev/null | \
+      while read -r _target; do
+        tmux set-window-option -t "$_target" automatic-rename on 2>/dev/null
+      done
+
     # ── Bubble bar ────────────────────────────────────────────
     local bubble_bar
     bubble_bar=$(opt "@nerd_icons_bubble_bar" "on")
