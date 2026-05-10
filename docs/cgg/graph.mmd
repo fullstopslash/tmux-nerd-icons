@@ -1,0 +1,88 @@
+flowchart LR
+  C0["get_icon"]
+  C1["main"]
+  C2["nerd_icons.ssh.parse_ssh_host"]
+  C3["nerd_icons.ssh._take_first_non_option"]
+  C4["nerd_icons.ssh._normalize_hostname"]
+  C5["nerd_icons.ssh.get_foreground_cmdline"]
+  C6["nerd_icons.__main__.main"]
+  C7["nerd_icons.resolver._value_to_icon_result"]
+  C8["nerd_icons.resolver._match_host"]
+  C9["nerd_icons.resolver._key_matches_entry"]
+  C10["nerd_icons.resolver._key_in_title"]
+  C11["nerd_icons.resolver._match_compound"]
+  C12["nerd_icons.resolver._match_title_via_icons"]
+  C13["nerd_icons.resolver._match_title_icons"]
+  C14["nerd_icons.resolver._match_process"]
+  C15["nerd_icons.resolver._match_session"]
+  C16["nerd_icons.resolver._apply_host_colors"]
+  C17["nerd_icons.resolver.resolve_icon"]
+  C18["nerd_icons.parser.YamlParseError.__init__"]
+  C19["nerd_icons.parser._strip_yaml_value"]
+  C20["nerd_icons.parser._normalize_yaml_key"]
+  C21["nerd_icons.parser._get_indent_level"]
+  C22["nerd_icons.parser._parse_bool"]
+  C23["nerd_icons.parser._is_inline_yaml_value"]
+  C24["nerd_icons.parser._iter_yaml_block"]
+  C25["nerd_icons.parser._parse_nested_block"]
+  C26["nerd_icons.parser._parse_config_section"]
+  C27["nerd_icons.parser._parse_nested_section"]
+  C28["nerd_icons.parser._parse_simple_section"]
+  C29["nerd_icons.parser._parse_layout_glyphs"]
+  C30["nerd_icons.parser.load_config"]
+  C31["nerd_icons.parser.load_config_from_string"]
+  C32["nerd_icons.cache.get_config"]
+  C33["nerd_icons.cache.clear_cache"]
+  C34["get_tmux_option"]
+  C35["get_config_path"]
+  C36["command_exists"]
+  C37["get_python"]
+  C38["log_error"]
+  C39["log_warn"]
+  C40["log_debug"]
+  C41["opt"]
+  C42["main"]
+  C1 --> C0
+  C2 --> C3
+  C2 --> C4
+  C8 -->|2x| C7
+  C9 -->|2x| C10
+  C11 --> C9
+  C12 --> C7
+  C14 --> C7
+  C17 --> C8
+  C17 --> C11
+  C17 -->|6x| C16
+  C17 --> C12
+  C17 --> C13
+  C17 --> C14
+  C17 --> C15
+  C24 --> C21
+  C24 --> C20
+  C24 --> C23
+  C24 --> C19
+  C25 --> C21
+  C25 --> C20
+  C25 --> C23
+  C25 --> C19
+  C25 --> C25
+  C26 --> C24
+  C26 -->|7x| C22
+  C27 --> C24
+  C27 --> C25
+  C28 --> C24
+  C29 --> C24
+  C30 --> C31
+  C31 --> C26
+  C31 -->|2x| C27
+  C31 -->|2x| C28
+  C31 --> C29
+  C35 --> C34
+  C37 -->|2x| C36
+  C42 -->|8x| C41
+  C6 --> C32
+  C6 -->|2x| C17
+  C6 --> C5
+  C6 --> C2
+  C17 --> C32
+  C32 --> C30

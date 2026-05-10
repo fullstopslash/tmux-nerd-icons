@@ -1,0 +1,6569 @@
+[
+  {
+    "event": "run_started",
+    "cgg_version": "0.1.0",
+    "argv": [
+      "cgg",
+      ".",
+      "-t",
+      "mermaid",
+      "-o",
+      "docs/cgg/graph.mmd"
+    ]
+  },
+  {
+    "event": "file_discovered",
+    "path": "./CLAUDE.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./CLAUDE.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.tmuxp.yaml"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.tmuxp.yaml",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./AGENTS.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./AGENTS.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./todo.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./todo.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.beads/metadata.json"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.beads/metadata.json",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.beads/README.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.beads/README.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.beads/config.yaml"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.beads/config.yaml",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.beads/interactions.jsonl"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.beads/interactions.jsonl",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.beads/.gitignore"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.beads/.gitignore",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./scripts/format_output.sh"
+  },
+  {
+    "event": "file_discovered",
+    "path": "./scripts/nerd_icons/ssh.py"
+  },
+  {
+    "event": "file_discovered",
+    "path": "./scripts/nerd_icons/__main__.py"
+  },
+  {
+    "event": "file_discovered",
+    "path": "./scripts/nerd_icons/resolver.py"
+  },
+  {
+    "event": "file_discovered",
+    "path": "./scripts/nerd_icons/parser.py"
+  },
+  {
+    "event": "file_discovered",
+    "path": "./scripts/nerd_icons/__init__.py"
+  },
+  {
+    "event": "file_discovered",
+    "path": "./scripts/nerd_icons/cache.py"
+  },
+  {
+    "event": "file_discovered",
+    "path": "./scripts/helpers.sh"
+  },
+  {
+    "event": "file_discovered",
+    "path": "./nerd-icons.tmux"
+  },
+  {
+    "event": "file_discovered",
+    "path": "./uv.lock"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./uv.lock",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.gitattributes"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.gitattributes",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.shellcheckrc"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.shellcheckrc",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.claude/plans/milestone-0-project-setup.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.claude/plans/milestone-0-project-setup.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.claude/plans/milestone-2-helpers.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.claude/plans/milestone-2-helpers.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.claude/plans/milestone-1-tpm-entry.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.claude/plans/milestone-1-tpm-entry.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.claude/plans/milestone-3-yaml-parser.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.claude/plans/milestone-3-yaml-parser.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.claude/plans/PLAN.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.claude/plans/PLAN.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.claude/plans/milestone-5-icon-resolver.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.claude/plans/milestone-5-icon-resolver.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.claude/plans/milestone-4-ssh-parser.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.claude/plans/milestone-4-ssh-parser.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.claude/plans/milestone-6-format-output.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.claude/plans/milestone-6-format-output.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.claude/settings.local.json"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.claude/settings.local.json",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./pyproject.toml"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./pyproject.toml",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./readme.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./readme.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./tests/test_conformance.sh"
+  },
+  {
+    "event": "file_discovered",
+    "path": "./docs/cgg/.regen.log"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./docs/cgg/.regen.log",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./generated-bubble-bar.conf"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./generated-bubble-bar.conf",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./license.md"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./license.md",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_discovered",
+    "path": "./.gitignore"
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.gitignore",
+    "reason": {
+      "kind": "unknown-extension"
+    }
+  },
+  {
+    "event": "file_analyzed",
+    "file": 0,
+    "path": "./scripts/format_output.sh",
+    "language": "bash",
+    "detected_via": "shebang:bash",
+    "blake3": "f9e2e8c921f8542b751330ceed7e78a5b7d2ac53575f64b056778ac5c6b23016",
+    "size_bytes": 3037,
+    "lines": 109,
+    "parse_ms": 0.586291,
+    "parse_status": "ok",
+    "callables": [
+      {
+        "id": 0,
+        "qualified_name": "get_icon",
+        "kind": "freefunction",
+        "start_line": 57,
+        "end_line": 89,
+        "start_byte": 1443,
+        "end_byte": 2541
+      },
+      {
+        "id": 1,
+        "qualified_name": "main",
+        "kind": "freefunction",
+        "start_line": 92,
+        "end_line": 107,
+        "start_byte": 2560,
+        "end_byte": 3030
+      }
+    ],
+    "unresolved_calls": [
+      {
+        "src": null,
+        "file": 0,
+        "site_line": 32,
+        "site_byte": 791,
+        "name": "log_error",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": null,
+        "file": 0,
+        "site_line": 50,
+        "site_byte": 1283,
+        "name": "log_warn",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 0,
+        "file": 0,
+        "site_line": 59,
+        "site_byte": 1496,
+        "name": "get_config_path",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 0,
+        "file": 0,
+        "site_line": 84,
+        "site_byte": 2337,
+        "name": "get_python",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": null,
+        "file": 0,
+        "site_line": 109,
+        "site_byte": 3032,
+        "name": "main",
+        "reason": "no-enclosing-callable"
+      }
+    ],
+    "stdlib_calls": [
+      {
+        "src": null,
+        "file": 0,
+        "site_line": 13,
+        "site_byte": 440,
+        "name": "pwd",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": null,
+        "file": 0,
+        "site_line": 34,
+        "site_byte": 861,
+        "name": "break",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 0,
+        "file": 0,
+        "site_line": 77,
+        "site_byte": 2137,
+        "name": "command",
+        "reason": "no-candidate-in-scope"
+      }
+    ],
+    "external_calls": [
+      {
+        "src": 0,
+        "file": 0,
+        "site_line": 78,
+        "site_byte": 2212,
+        "name": "\"${bin}\"",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 0,
+        "file": 0,
+        "site_line": 88,
+        "site_byte": 2424,
+        "name": "\"${python}\"",
+        "reason": "no-candidate-in-scope"
+      }
+    ]
+  },
+  {
+    "event": "file_analyzed",
+    "file": 1,
+    "path": "./scripts/nerd_icons/ssh.py",
+    "language": "python",
+    "detected_via": "extension:.py",
+    "blake3": "b87893ab19853b7c211e83aedce955de59a7070833fa97932e5029e7c1acf942",
+    "size_bytes": 3422,
+    "lines": 126,
+    "parse_ms": 0.454805,
+    "parse_status": "ok",
+    "callables": [
+      {
+        "id": 2,
+        "qualified_name": "nerd_icons.ssh.parse_ssh_host",
+        "kind": "freefunction",
+        "start_line": 26,
+        "end_line": 48,
+        "start_byte": 677,
+        "end_byte": 1307
+      },
+      {
+        "id": 3,
+        "qualified_name": "nerd_icons.ssh._take_first_non_option",
+        "kind": "freefunction",
+        "start_line": 51,
+        "end_line": 73,
+        "start_byte": 1310,
+        "end_byte": 1898
+      },
+      {
+        "id": 4,
+        "qualified_name": "nerd_icons.ssh._normalize_hostname",
+        "kind": "freefunction",
+        "start_line": 76,
+        "end_line": 93,
+        "start_byte": 1901,
+        "end_byte": 2420
+      },
+      {
+        "id": 5,
+        "qualified_name": "nerd_icons.ssh.get_foreground_cmdline",
+        "kind": "freefunction",
+        "start_line": 96,
+        "end_line": 126,
+        "start_byte": 2423,
+        "end_byte": 3421
+      }
+    ],
+    "stdlib_calls": [
+      {
+        "src": null,
+        "file": 1,
+        "site_line": 16,
+        "site_byte": 384,
+        "name": "frozenset",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": null,
+        "file": 1,
+        "site_line": 19,
+        "site_byte": 522,
+        "name": "frozenset",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 2,
+        "file": 1,
+        "site_line": 35,
+        "site_byte": 1014,
+        "name": "isinstance",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 2,
+        "file": 1,
+        "site_line": 35,
+        "site_byte": 1044,
+        "name": "list",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 2,
+        "file": 1,
+        "site_line": 40,
+        "site_byte": 1108,
+        "name": "basename",
+        "receiver_hint": "os.path",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 3,
+        "file": 1,
+        "site_line": 54,
+        "site_byte": 1464,
+        "name": "len",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 3,
+        "file": 1,
+        "site_line": 58,
+        "site_byte": 1564,
+        "name": "len",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 3,
+        "file": 1,
+        "site_line": 65,
+        "site_byte": 1726,
+        "name": "len",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 5,
+        "file": 1,
+        "site_line": 110,
+        "site_byte": 2853,
+        "name": "open",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 5,
+        "file": 1,
+        "site_line": 116,
+        "site_byte": 3091,
+        "name": "int",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 5,
+        "file": 1,
+        "site_line": 119,
+        "site_byte": 3173,
+        "name": "open",
+        "reason": "no-candidate-in-scope"
+      }
+    ],
+    "external_calls": [
+      {
+        "src": 2,
+        "file": 1,
+        "site_line": 35,
+        "site_byte": 995,
+        "name": "split",
+        "receiver_hint": "str | Sequence",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 3,
+        "file": 1,
+        "site_line": 60,
+        "site_byte": 1596,
+        "name": "startswith",
+        "receiver_hint": "arg",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 4,
+        "file": 1,
+        "site_line": 83,
+        "site_byte": 2138,
+        "name": "split",
+        "receiver_hint": "host",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 4,
+        "file": 1,
+        "site_line": 85,
+        "site_byte": 2172,
+        "name": "strip",
+        "receiver_hint": "host",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 4,
+        "file": 1,
+        "site_line": 87,
+        "site_byte": 2193,
+        "name": "startswith",
+        "receiver_hint": "host",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 4,
+        "file": 1,
+        "site_line": 88,
+        "site_byte": 2237,
+        "name": "find",
+        "receiver_hint": "host",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 4,
+        "file": 1,
+        "site_line": 90,
+        "site_byte": 2329,
+        "name": "count",
+        "receiver_hint": "host",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 4,
+        "file": 1,
+        "site_line": 91,
+        "site_byte": 2366,
+        "name": "split",
+        "receiver_hint": "host",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 4,
+        "file": 1,
+        "site_line": 93,
+        "site_byte": 2400,
+        "name": "lower",
+        "receiver_hint": "host",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 5,
+        "file": 1,
+        "site_line": 111,
+        "site_byte": 2938,
+        "name": "read",
+        "receiver_hint": "f",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 5,
+        "file": 1,
+        "site_line": 113,
+        "site_byte": 2970,
+        "name": "rfind",
+        "receiver_hint": "stat_content",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 5,
+        "file": 1,
+        "site_line": 115,
+        "site_byte": 3062,
+        "name": "split",
+        "receiver_hint": "rest",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 5,
+        "file": 1,
+        "site_line": 120,
+        "site_byte": 3264,
+        "name": "read",
+        "receiver_hint": "f",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 5,
+        "file": 1,
+        "site_line": 122,
+        "site_byte": 3290,
+        "name": "split",
+        "receiver_hint": "cmdline_content",
+        "reason": "no-candidate-in-scope"
+      }
+    ]
+  },
+  {
+    "event": "file_analyzed",
+    "file": 2,
+    "path": "./scripts/nerd_icons/__main__.py",
+    "language": "python",
+    "detected_via": "extension:.py",
+    "blake3": "a4155dc741927f12ec29665ddb4941de9fa33f4d28a967a7a258d001dfb28433",
+    "size_bytes": 3180,
+    "lines": 91,
+    "parse_ms": 0.409149,
+    "parse_status": "ok",
+    "callables": [
+      {
+        "id": 6,
+        "qualified_name": "nerd_icons.__main__.main",
+        "kind": "freefunction",
+        "start_line": 24,
+        "end_line": 87,
+        "start_byte": 538,
+        "end_byte": 3129
+      }
+    ],
+    "unresolved_calls": [
+      {
+        "src": null,
+        "file": 2,
+        "site_line": 91,
+        "site_byte": 3172,
+        "name": "main",
+        "reason": "no-enclosing-callable"
+      }
+    ],
+    "stdlib_calls": [
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 26,
+        "site_byte": 597,
+        "name": "ArgumentParser",
+        "receiver_hint": "argparse",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 73,
+        "site_byte": 2678,
+        "name": "print",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 73,
+        "site_byte": 2684,
+        "name": "dumps",
+        "receiver_hint": "json",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 73,
+        "site_byte": 2695,
+        "name": "asdict",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 76,
+        "site_byte": 2828,
+        "name": "print",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 78,
+        "site_byte": 2892,
+        "name": "print",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 83,
+        "site_byte": 2973,
+        "name": "print",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 86,
+        "site_byte": 3075,
+        "name": "print",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": null,
+        "file": 2,
+        "site_line": 91,
+        "site_byte": 3163,
+        "name": "exit",
+        "receiver_hint": "sys",
+        "reason": "no-candidate-in-scope"
+      }
+    ],
+    "external_calls": [
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 29,
+        "site_byte": 704,
+        "name": "add_argument",
+        "receiver_hint": "ArgumentParser",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 30,
+        "site_byte": 780,
+        "name": "add_argument",
+        "receiver_hint": "ArgumentParser",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 31,
+        "site_byte": 859,
+        "name": "add_argument",
+        "receiver_hint": "ArgumentParser",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 32,
+        "site_byte": 935,
+        "name": "add_argument",
+        "receiver_hint": "ArgumentParser",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 33,
+        "site_byte": 1017,
+        "name": "add_argument",
+        "receiver_hint": "ArgumentParser",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 34,
+        "site_byte": 1116,
+        "name": "add_argument",
+        "receiver_hint": "ArgumentParser",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 35,
+        "site_byte": 1213,
+        "name": "add_argument",
+        "receiver_hint": "ArgumentParser",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 37,
+        "site_byte": 1325,
+        "name": "add_mutually_exclusive_group",
+        "receiver_hint": "ArgumentParser",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 38,
+        "site_byte": 1367,
+        "name": "add_argument",
+        "receiver_hint": "output_mode",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 39,
+        "site_byte": 1472,
+        "name": "add_argument",
+        "receiver_hint": "output_mode",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 6,
+        "file": 2,
+        "site_line": 41,
+        "site_byte": 1563,
+        "name": "parse_args",
+        "receiver_hint": "ArgumentParser",
+        "reason": "no-candidate-in-scope"
+      }
+    ]
+  },
+  {
+    "event": "file_analyzed",
+    "file": 3,
+    "path": "./scripts/nerd_icons/resolver.py",
+    "language": "python",
+    "detected_via": "extension:.py",
+    "blake3": "69d4a93a1a09d667e033d9a9200d2a52b5e8ed975c3ce05ae943866147852ca7",
+    "size_bytes": 9534,
+    "lines": 320,
+    "parse_ms": 0.950537,
+    "parse_status": "ok",
+    "callables": [
+      {
+        "id": 7,
+        "qualified_name": "nerd_icons.resolver._value_to_icon_result",
+        "kind": "freefunction",
+        "start_line": 44,
+        "end_line": 59,
+        "start_byte": 1141,
+        "end_byte": 1672
+      },
+      {
+        "id": 8,
+        "qualified_name": "nerd_icons.resolver._match_host",
+        "kind": "freefunction",
+        "start_line": 62,
+        "end_line": 86,
+        "start_byte": 1675,
+        "end_byte": 2487
+      },
+      {
+        "id": 9,
+        "qualified_name": "nerd_icons.resolver._key_matches_entry",
+        "kind": "freefunction",
+        "start_line": 89,
+        "end_line": 108,
+        "start_byte": 2490,
+        "end_byte": 3154
+      },
+      {
+        "id": 10,
+        "qualified_name": "nerd_icons.resolver._key_in_title",
+        "kind": "freefunction",
+        "start_line": 111,
+        "end_line": 115,
+        "start_byte": 3157,
+        "end_byte": 3363
+      },
+      {
+        "id": 11,
+        "qualified_name": "nerd_icons.resolver._match_compound",
+        "kind": "freefunction",
+        "start_line": 118,
+        "end_line": 154,
+        "start_byte": 3366,
+        "end_byte": 4528
+      },
+      {
+        "id": 12,
+        "qualified_name": "nerd_icons.resolver._match_title_via_icons",
+        "kind": "freefunction",
+        "start_line": 157,
+        "end_line": 181,
+        "start_byte": 4531,
+        "end_byte": 5230
+      },
+      {
+        "id": 13,
+        "qualified_name": "nerd_icons.resolver._match_title_icons",
+        "kind": "freefunction",
+        "start_line": 184,
+        "end_line": 197,
+        "start_byte": 5233,
+        "end_byte": 5631
+      },
+      {
+        "id": 14,
+        "qualified_name": "nerd_icons.resolver._match_process",
+        "kind": "freefunction",
+        "start_line": 200,
+        "end_line": 223,
+        "start_byte": 5634,
+        "end_byte": 6312
+      },
+      {
+        "id": 15,
+        "qualified_name": "nerd_icons.resolver._match_session",
+        "kind": "freefunction",
+        "start_line": 226,
+        "end_line": 244,
+        "start_byte": 6315,
+        "end_byte": 6909
+      },
+      {
+        "id": 16,
+        "qualified_name": "nerd_icons.resolver._apply_host_colors",
+        "kind": "freefunction",
+        "start_line": 247,
+        "end_line": 257,
+        "start_byte": 6912,
+        "end_byte": 7398
+      },
+      {
+        "id": 17,
+        "qualified_name": "nerd_icons.resolver.resolve_icon",
+        "kind": "freefunction",
+        "start_line": 260,
+        "end_line": 320,
+        "start_byte": 7401,
+        "end_byte": 9533
+      }
+    ],
+    "stdlib_calls": [
+      {
+        "src": null,
+        "file": 3,
+        "site_line": 27,
+        "site_byte": 841,
+        "name": "compile",
+        "receiver_hint": "re",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": null,
+        "file": 3,
+        "site_line": 30,
+        "site_byte": 907,
+        "name": "frozenset",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 7,
+        "file": 3,
+        "site_line": 50,
+        "site_byte": 1334,
+        "name": "isinstance",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 8,
+        "file": 3,
+        "site_line": 80,
+        "site_byte": 2273,
+        "name": "items",
+        "receiver_hint": "dict",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 8,
+        "file": 3,
+        "site_line": 83,
+        "site_byte": 2370,
+        "name": "fnmatch",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 9,
+        "file": 3,
+        "site_line": 97,
+        "site_byte": 2726,
+        "name": "isinstance",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 11,
+        "file": 3,
+        "site_line": 128,
+        "site_byte": 3663,
+        "name": "items",
+        "receiver_hint": "dict",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 11,
+        "file": 3,
+        "site_line": 129,
+        "site_byte": 3693,
+        "name": "isinstance",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 11,
+        "file": 3,
+        "site_line": 133,
+        "site_byte": 3821,
+        "name": "isinstance",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 11,
+        "file": 3,
+        "site_line": 142,
+        "site_byte": 4130,
+        "name": "len",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 11,
+        "file": 3,
+        "site_line": 145,
+        "site_byte": 4227,
+        "name": "search",
+        "receiver_hint": "re",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 11,
+        "file": 3,
+        "site_line": 147,
+        "site_byte": 4322,
+        "name": "str",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 12,
+        "file": 3,
+        "site_line": 168,
+        "site_byte": 4839,
+        "name": "items",
+        "receiver_hint": "dict",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 12,
+        "file": 3,
+        "site_line": 169,
+        "site_byte": 4869,
+        "name": "isinstance",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 13,
+        "file": 3,
+        "site_line": 193,
+        "site_byte": 5492,
+        "name": "items",
+        "receiver_hint": "dict",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 14,
+        "file": 3,
+        "site_line": 210,
+        "site_byte": 5892,
+        "name": "get",
+        "receiver_hint": "dict",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 14,
+        "file": 3,
+        "site_line": 215,
+        "site_byte": 5984,
+        "name": "isinstance",
+        "reason": "no-candidate-in-scope"
+      }
+    ],
+    "external_calls": [
+      {
+        "src": 7,
+        "file": 3,
+        "site_line": 51,
+        "site_byte": 1373,
+        "name": "IconResult",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 7,
+        "file": 3,
+        "site_line": 53,
+        "site_byte": 1423,
+        "name": "IconResult",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 7,
+        "file": 3,
+        "site_line": 54,
+        "site_byte": 1448,
+        "name": "get",
+        "receiver_hint": "str | dict",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 7,
+        "file": 3,
+        "site_line": 55,
+        "site_byte": 1501,
+        "name": "get",
+        "receiver_hint": "str | dict",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 7,
+        "file": 3,
+        "site_line": 55,
+        "site_byte": 1528,
+        "name": "get",
+        "receiver_hint": "str | dict",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 7,
+        "file": 3,
+        "site_line": 56,
+        "site_byte": 1573,
+        "name": "get",
+        "receiver_hint": "str | dict",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 7,
+        "file": 3,
+        "site_line": 57,
+        "site_byte": 1618,
+        "name": "get",
+        "receiver_hint": "str | dict",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 8,
+        "file": 3,
+        "site_line": 73,
+        "site_byte": 2058,
+        "name": "lower",
+        "receiver_hint": "hostname",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 8,
+        "file": 3,
+        "site_line": 81,
+        "site_byte": 2305,
+        "name": "isdisjoint",
+        "receiver_hint": "_GLOB_CHARS",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 9,
+        "file": 3,
+        "site_line": 98,
+        "site_byte": 2771,
+        "name": "get",
+        "receiver_hint": "str | dict",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 10,
+        "file": 3,
+        "site_line": 115,
+        "site_byte": 3335,
+        "name": "lower",
+        "receiver_hint": "key",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 10,
+        "file": 3,
+        "site_line": 115,
+        "site_byte": 3350,
+        "name": "lower",
+        "receiver_hint": "title",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 11,
+        "file": 3,
+        "site_line": 132,
+        "site_byte": 3765,
+        "name": "get",
+        "receiver_hint": "value",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 11,
+        "file": 3,
+        "site_line": 141,
+        "site_byte": 4091,
+        "name": "items",
+        "receiver_hint": "title_patterns",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 11,
+        "file": 3,
+        "site_line": 146,
+        "site_byte": 4281,
+        "name": "IconResult",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 11,
+        "file": 3,
+        "site_line": 148,
+        "site_byte": 4368,
+        "name": "get",
+        "receiver_hint": "value",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 12,
+        "file": 3,
+        "site_line": 166,
+        "site_byte": 4802,
+        "name": "lower",
+        "receiver_hint": "title",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 12,
+        "file": 3,
+        "site_line": 172,
+        "site_byte": 4936,
+        "name": "get",
+        "receiver_hint": "value",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 12,
+        "file": 3,
+        "site_line": 178,
+        "site_byte": 5112,
+        "name": "lower",
+        "receiver_hint": "key",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 13,
+        "file": 3,
+        "site_line": 192,
+        "site_byte": 5457,
+        "name": "lower",
+        "receiver_hint": "title",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 13,
+        "file": 3,
+        "site_line": 194,
+        "site_byte": 5524,
+        "name": "lower",
+        "receiver_hint": "key",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 13,
+        "file": 3,
+        "site_line": 195,
+        "site_byte": 5571,
+        "name": "IconResult",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 14,
+        "file": 3,
+        "site_line": 216,
+        "site_byte": 6029,
+        "name": "get",
+        "receiver_hint": "value",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 15,
+        "file": 3,
+        "site_line": 236,
+        "site_byte": 6585,
+        "name": "IconResult",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 15,
+        "file": 3,
+        "site_line": 239,
+        "site_byte": 6729,
+        "name": "split",
+        "receiver_hint": "_SESSION_TOKEN_RE",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 15,
+        "file": 3,
+        "site_line": 242,
+        "site_byte": 6842,
+        "name": "IconResult",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 17,
+        "file": 3,
+        "site_line": 320,
+        "site_byte": 9475,
+        "name": "IconResult",
+        "reason": "no-candidate-in-scope"
+      }
+    ]
+  },
+  {
+    "event": "file_analyzed",
+    "file": 4,
+    "path": "./scripts/nerd_icons/parser.py",
+    "language": "python",
+    "detected_via": "extension:.py",
+    "blake3": "fc60454b3a97086887f7a9afe7172b1e0d75ee5f919ce1ebfe5d7b8072e9789e",
+    "size_bytes": 11221,
+    "lines": 367,
+    "parse_ms": 1.25542,
+    "parse_status": "ok",
+    "callables": [
+      {
+        "id": 18,
+        "qualified_name": "nerd_icons.parser.YamlParseError.__init__",
+        "kind": "constructor",
+        "start_line": 62,
+        "end_line": 66,
+        "start_byte": 1841,
+        "end_byte": 2078
+      },
+      {
+        "id": 19,
+        "qualified_name": "nerd_icons.parser._strip_yaml_value",
+        "kind": "freefunction",
+        "start_line": 69,
+        "end_line": 83,
+        "start_byte": 2081,
+        "end_byte": 2497
+      },
+      {
+        "id": 20,
+        "qualified_name": "nerd_icons.parser._normalize_yaml_key",
+        "kind": "freefunction",
+        "start_line": 86,
+        "end_line": 91,
+        "start_byte": 2500,
+        "end_byte": 2795
+      },
+      {
+        "id": 21,
+        "qualified_name": "nerd_icons.parser._get_indent_level",
+        "kind": "freefunction",
+        "start_line": 94,
+        "end_line": 100,
+        "start_byte": 2798,
+        "end_byte": 3110
+      },
+      {
+        "id": 22,
+        "qualified_name": "nerd_icons.parser._parse_bool",
+        "kind": "freefunction",
+        "start_line": 103,
+        "end_line": 106,
+        "start_byte": 3113,
+        "end_byte": 3256
+      },
+      {
+        "id": 23,
+        "qualified_name": "nerd_icons.parser._is_inline_yaml_value",
+        "kind": "freefunction",
+        "start_line": 109,
+        "end_line": 115,
+        "start_byte": 3259,
+        "end_byte": 3539
+      },
+      {
+        "id": 24,
+        "qualified_name": "nerd_icons.parser._iter_yaml_block",
+        "kind": "freefunction",
+        "start_line": 118,
+        "end_line": 166,
+        "start_byte": 3542,
+        "end_byte": 4911
+      },
+      {
+        "id": 25,
+        "qualified_name": "nerd_icons.parser._parse_nested_block",
+        "kind": "freefunction",
+        "start_line": 169,
+        "end_line": 219,
+        "start_byte": 4914,
+        "end_byte": 6202
+      },
+      {
+        "id": 26,
+        "qualified_name": "nerd_icons.parser._parse_config_section",
+        "kind": "freefunction",
+        "start_line": 222,
+        "end_line": 269,
+        "start_byte": 6205,
+        "end_byte": 8164
+      },
+      {
+        "id": 27,
+        "qualified_name": "nerd_icons.parser._parse_nested_section",
+        "kind": "freefunction",
+        "start_line": 272,
+        "end_line": 284,
+        "start_byte": 8167,
+        "end_byte": 8682
+      },
+      {
+        "id": 28,
+        "qualified_name": "nerd_icons.parser._parse_simple_section",
+        "kind": "freefunction",
+        "start_line": 287,
+        "end_line": 295,
+        "start_byte": 8685,
+        "end_byte": 9019
+      },
+      {
+        "id": 29,
+        "qualified_name": "nerd_icons.parser._parse_layout_glyphs",
+        "kind": "freefunction",
+        "start_line": 298,
+        "end_line": 307,
+        "start_byte": 9022,
+        "end_byte": 9417
+      },
+      {
+        "id": 30,
+        "qualified_name": "nerd_icons.parser.load_config",
+        "kind": "freefunction",
+        "start_line": 310,
+        "end_line": 334,
+        "start_byte": 9420,
+        "end_byte": 10189
+      },
+      {
+        "id": 31,
+        "qualified_name": "nerd_icons.parser.load_config_from_string",
+        "kind": "freefunction",
+        "start_line": 337,
+        "end_line": 367,
+        "start_byte": 10192,
+        "end_byte": 11220
+      }
+    ],
+    "unresolved_calls": [
+      {
+        "src": 21,
+        "file": 4,
+        "site_line": 99,
+        "site_byte": 3026,
+        "name": "YamlParseError",
+        "reason": "no-candidate-in-scope"
+      }
+    ],
+    "stdlib_calls": [
+      {
+        "src": null,
+        "file": 4,
+        "site_line": 39,
+        "site_byte": 1059,
+        "name": "field",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": null,
+        "file": 4,
+        "site_line": 53,
+        "site_byte": 1470,
+        "name": "field",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": null,
+        "file": 4,
+        "site_line": 54,
+        "site_byte": 1550,
+        "name": "field",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": null,
+        "file": 4,
+        "site_line": 55,
+        "site_byte": 1627,
+        "name": "field",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": null,
+        "file": 4,
+        "site_line": 56,
+        "site_byte": 1718,
+        "name": "field",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 18,
+        "file": 4,
+        "site_line": 66,
+        "site_byte": 2053,
+        "name": "super",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 20,
+        "file": 4,
+        "site_line": 89,
+        "site_byte": 2665,
+        "name": "len",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 21,
+        "file": 4,
+        "site_line": 97,
+        "site_byte": 2941,
+        "name": "len",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 21,
+        "file": 4,
+        "site_line": 97,
+        "site_byte": 2953,
+        "name": "len",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 23,
+        "file": 4,
+        "site_line": 115,
+        "site_byte": 3505,
+        "name": "len",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 24,
+        "file": 4,
+        "site_line": 130,
+        "site_byte": 3890,
+        "name": "enumerate",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 25,
+        "file": 4,
+        "site_line": 179,
+        "site_byte": 5196,
+        "name": "len",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 26,
+        "file": 4,
+        "site_line": 246,
+        "site_byte": 7196,
+        "name": "int",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 26,
+        "file": 4,
+        "site_line": 251,
+        "site_byte": 7365,
+        "name": "int",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 30,
+        "file": 4,
+        "site_line": 323,
+        "site_byte": 9789,
+        "name": "expanduser",
+        "receiver_hint": "os.path",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 30,
+        "file": 4,
+        "site_line": 326,
+        "site_byte": 9837,
+        "name": "open",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 30,
+        "file": 4,
+        "site_line": 329,
+        "site_byte": 9961,
+        "name": "FileNotFoundError",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 30,
+        "file": 4,
+        "site_line": 331,
+        "site_byte": 10032,
+        "name": "len",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 30,
+        "file": 4,
+        "site_line": 332,
+        "site_byte": 10078,
+        "name": "ValueError",
+        "reason": "no-candidate-in-scope"
+      }
+    ],
+    "external_calls": [
+      {
+        "src": 18,
+        "file": 4,
+        "site_line": 66,
+        "site_byte": 2053,
+        "name": "__init__",
+        "receiver_hint": "super()",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 19,
+        "file": 4,
+        "site_line": 71,
+        "site_byte": 2205,
+        "name": "strip",
+        "receiver_hint": "val",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 19,
+        "file": 4,
+        "site_line": 75,
+        "site_byte": 2292,
+        "name": "find",
+        "receiver_hint": "val",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 19,
+        "file": 4,
+        "site_line": 81,
+        "site_byte": 2452,
+        "name": "strip",
+        "receiver_hint": "val.split(\" #\", 1)[0]",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 19,
+        "file": 4,
+        "site_line": 81,
+        "site_byte": 2452,
+        "name": "split",
+        "receiver_hint": "val",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 20,
+        "file": 4,
+        "site_line": 88,
+        "site_byte": 2646,
+        "name": "strip",
+        "receiver_hint": "raw",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 20,
+        "file": 4,
+        "site_line": 91,
+        "site_byte": 2762,
+        "name": "lower",
+        "receiver_hint": "key",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 21,
+        "file": 4,
+        "site_line": 96,
+        "site_byte": 2914,
+        "name": "lstrip",
+        "receiver_hint": "line",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 22,
+        "file": 4,
+        "site_line": 105,
+        "site_byte": 3194,
+        "name": "strip",
+        "receiver_hint": "val.lower()",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 22,
+        "file": 4,
+        "site_line": 105,
+        "site_byte": 3194,
+        "name": "lower",
+        "receiver_hint": "val",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 24,
+        "file": 4,
+        "site_line": 131,
+        "site_byte": 3927,
+        "name": "strip",
+        "receiver_hint": "raw",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 24,
+        "file": 4,
+        "site_line": 134,
+        "site_byte": 4008,
+        "name": "startswith",
+        "receiver_hint": "stripped",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 24,
+        "file": 4,
+        "site_line": 138,
+        "site_byte": 4130,
+        "name": "startswith",
+        "receiver_hint": "stripped",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 24,
+        "file": 4,
+        "site_line": 155,
+        "site_byte": 4542,
+        "name": "split",
+        "receiver_hint": "stripped",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 24,
+        "file": 4,
+        "site_line": 157,
+        "site_byte": 4641,
+        "name": "strip",
+        "receiver_hint": "val_part",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 25,
+        "file": 4,
+        "site_line": 181,
+        "site_byte": 5252,
+        "name": "strip",
+        "receiver_hint": "raw",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 25,
+        "file": 4,
+        "site_line": 183,
+        "site_byte": 5292,
+        "name": "startswith",
+        "receiver_hint": "stripped",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 25,
+        "file": 4,
+        "site_line": 203,
+        "site_byte": 5736,
+        "name": "split",
+        "receiver_hint": "stripped",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 25,
+        "file": 4,
+        "site_line": 205,
+        "site_byte": 5835,
+        "name": "strip",
+        "receiver_hint": "val_part",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 26,
+        "file": 4,
+        "site_line": 224,
+        "site_byte": 6333,
+        "name": "IconConfig",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 26,
+        "file": 4,
+        "site_line": 230,
+        "site_byte": 6485,
+        "name": "replace",
+        "receiver_hint": "key.lower()",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 26,
+        "file": 4,
+        "site_line": 230,
+        "site_byte": 6485,
+        "name": "lower",
+        "receiver_hint": "key",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 30,
+        "file": 4,
+        "site_line": 327,
+        "site_byte": 9894,
+        "name": "read",
+        "receiver_hint": "f",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 31,
+        "file": 4,
+        "site_line": 346,
+        "site_byte": 10426,
+        "name": "splitlines",
+        "receiver_hint": "content",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 31,
+        "file": 4,
+        "site_line": 357,
+        "site_byte": 10810,
+        "name": "ParsedConfig",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 31,
+        "file": 4,
+        "site_line": 363,
+        "site_byte": 10970,
+        "name": "lower",
+        "receiver_hint": "k",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 31,
+        "file": 4,
+        "site_line": 363,
+        "site_byte": 10995,
+        "name": "items",
+        "receiver_hint": "icons",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 31,
+        "file": 4,
+        "site_line": 364,
+        "site_byte": 11038,
+        "name": "lower",
+        "receiver_hint": "k",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 31,
+        "file": 4,
+        "site_line": 364,
+        "site_byte": 11063,
+        "name": "items",
+        "receiver_hint": "title_icons",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 31,
+        "file": 4,
+        "site_line": 365,
+        "site_byte": 11109,
+        "name": "lower",
+        "receiver_hint": "k",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 31,
+        "file": 4,
+        "site_line": 365,
+        "site_byte": 11134,
+        "name": "items",
+        "receiver_hint": "sessions",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 31,
+        "file": 4,
+        "site_line": 366,
+        "site_byte": 11174,
+        "name": "lower",
+        "receiver_hint": "k",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 31,
+        "file": 4,
+        "site_line": 366,
+        "site_byte": 11199,
+        "name": "items",
+        "receiver_hint": "hosts",
+        "reason": "no-candidate-in-scope"
+      }
+    ]
+  },
+  {
+    "event": "file_analyzed",
+    "file": 5,
+    "path": "./scripts/nerd_icons/__init__.py",
+    "language": "python",
+    "detected_via": "extension:.py",
+    "blake3": "c27dfe5b455c4243304af63ed14a70e18bf106b02d60ad9669a8cd002a82ffdf",
+    "size_bytes": 414,
+    "lines": 13,
+    "parse_ms": 0.080141,
+    "parse_status": "ok"
+  },
+  {
+    "event": "file_analyzed",
+    "file": 6,
+    "path": "./scripts/nerd_icons/cache.py",
+    "language": "python",
+    "detected_via": "extension:.py",
+    "blake3": "1b39f229abd1758e1485caadc1374ce62db73a00af39ac03008c4970b2207a18",
+    "size_bytes": 1669,
+    "lines": 64,
+    "parse_ms": 0.166432,
+    "parse_status": "ok",
+    "callables": [
+      {
+        "id": 32,
+        "qualified_name": "nerd_icons.cache.get_config",
+        "kind": "freefunction",
+        "start_line": 20,
+        "end_line": 56,
+        "start_byte": 432,
+        "end_byte": 1447
+      },
+      {
+        "id": 33,
+        "qualified_name": "nerd_icons.cache.clear_cache",
+        "kind": "freefunction",
+        "start_line": 59,
+        "end_line": 64,
+        "start_byte": 1450,
+        "end_byte": 1668
+      }
+    ],
+    "stdlib_calls": [
+      {
+        "src": 32,
+        "file": 6,
+        "site_line": 34,
+        "site_byte": 836,
+        "name": "expanduser",
+        "receiver_hint": "os.path",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 32,
+        "file": 6,
+        "site_line": 37,
+        "site_byte": 902,
+        "name": "getmtime",
+        "receiver_hint": "os.path",
+        "reason": "no-candidate-in-scope"
+      }
+    ]
+  },
+  {
+    "event": "file_analyzed",
+    "file": 7,
+    "path": "./scripts/helpers.sh",
+    "language": "bash",
+    "detected_via": "shebang:bash",
+    "blake3": "06487048141f7de221fd0d3b4bbb04704b3291345fba19fdfeb104b2a54410cc",
+    "size_bytes": 3466,
+    "lines": 132,
+    "parse_ms": 0.44670000000000004,
+    "parse_status": "ok",
+    "callables": [
+      {
+        "id": 34,
+        "qualified_name": "get_tmux_option",
+        "kind": "freefunction",
+        "start_line": 37,
+        "end_line": 47,
+        "start_byte": 1207,
+        "end_byte": 1505
+      },
+      {
+        "id": 35,
+        "qualified_name": "get_config_path",
+        "kind": "freefunction",
+        "start_line": 58,
+        "end_line": 72,
+        "start_byte": 1775,
+        "end_byte": 2124
+      },
+      {
+        "id": 36,
+        "qualified_name": "command_exists",
+        "kind": "freefunction",
+        "start_line": 80,
+        "end_line": 82,
+        "start_byte": 2276,
+        "end_byte": 2332
+      },
+      {
+        "id": 37,
+        "qualified_name": "get_python",
+        "kind": "freefunction",
+        "start_line": 91,
+        "end_line": 104,
+        "start_byte": 2537,
+        "end_byte": 2884
+      },
+      {
+        "id": 38,
+        "qualified_name": "log_error",
+        "kind": "freefunction",
+        "start_line": 110,
+        "end_line": 112,
+        "start_byte": 2979,
+        "end_byte": 3032
+      },
+      {
+        "id": 39,
+        "qualified_name": "log_warn",
+        "kind": "freefunction",
+        "start_line": 118,
+        "end_line": 120,
+        "start_byte": 3125,
+        "end_byte": 3176
+      },
+      {
+        "id": 40,
+        "qualified_name": "log_debug",
+        "kind": "freefunction",
+        "start_line": 128,
+        "end_line": 132,
+        "start_byte": 3352,
+        "end_byte": 3465
+      }
+    ],
+    "stdlib_calls": [
+      {
+        "src": null,
+        "file": 7,
+        "site_line": 21,
+        "site_byte": 794,
+        "name": "pwd",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": null,
+        "file": 7,
+        "site_line": 25,
+        "site_byte": 888,
+        "name": "dirname",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 36,
+        "file": 7,
+        "site_line": 81,
+        "site_byte": 2299,
+        "name": "command",
+        "reason": "no-candidate-in-scope"
+      }
+    ],
+    "external_calls": [
+      {
+        "src": 34,
+        "file": 7,
+        "site_line": 42,
+        "site_byte": 1324,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 37,
+        "file": 7,
+        "site_line": 96,
+        "site_byte": 2690,
+        "name": "python",
+        "reason": "no-candidate-in-scope"
+      }
+    ]
+  },
+  {
+    "event": "file_analyzed",
+    "file": 8,
+    "path": "./nerd-icons.tmux",
+    "language": "bash",
+    "detected_via": "shebang:bash",
+    "blake3": "e1480c4969d4eabf3cec695637ee4619cbecf6e3315bfd0db75d45c160756234",
+    "size_bytes": 6524,
+    "lines": 134,
+    "parse_ms": 0.674157,
+    "parse_status": "ok",
+    "callables": [
+      {
+        "id": 41,
+        "qualified_name": "opt",
+        "kind": "freefunction",
+        "start_line": 31,
+        "end_line": 35,
+        "start_byte": 1350,
+        "end_byte": 1460
+      },
+      {
+        "id": 42,
+        "qualified_name": "main",
+        "kind": "freefunction",
+        "start_line": 37,
+        "end_line": 132,
+        "start_byte": 1462,
+        "end_byte": 6512
+      }
+    ],
+    "unresolved_calls": [
+      {
+        "src": null,
+        "file": 8,
+        "site_line": 134,
+        "site_byte": 6514,
+        "name": "main",
+        "reason": "no-enclosing-callable"
+      }
+    ],
+    "stdlib_calls": [
+      {
+        "src": null,
+        "file": 8,
+        "site_line": 26,
+        "site_byte": 1260,
+        "name": "pwd",
+        "reason": "no-candidate-in-scope"
+      }
+    ],
+    "external_calls": [
+      {
+        "src": 41,
+        "file": 8,
+        "site_line": 33,
+        "site_byte": 1382,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 46,
+        "site_byte": 1866,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 47,
+        "site_byte": 1909,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 50,
+        "site_byte": 2053,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 52,
+        "site_byte": 2167,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 78,
+        "site_byte": 3379,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 79,
+        "site_byte": 3432,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 80,
+        "site_byte": 3485,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 81,
+        "site_byte": 3538,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 82,
+        "site_byte": 3591,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 83,
+        "site_byte": 3644,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 84,
+        "site_byte": 3697,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 85,
+        "site_byte": 3750,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 86,
+        "site_byte": 3803,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 87,
+        "site_byte": 3856,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 129,
+        "site_byte": 6322,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 130,
+        "site_byte": 6379,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": 42,
+        "file": 8,
+        "site_line": 131,
+        "site_byte": 6450,
+        "name": "tmux",
+        "reason": "no-candidate-in-scope"
+      }
+    ]
+  },
+  {
+    "event": "file_analyzed",
+    "file": 9,
+    "path": "./tests/test_conformance.sh",
+    "language": "bash",
+    "detected_via": "shebang:bash",
+    "blake3": "4ac06772369e935fbe69f63ab3a7ab3754b469f278d9364ace423ed25855dc28",
+    "size_bytes": 1156,
+    "lines": 38,
+    "parse_ms": 0.178174,
+    "parse_status": "ok",
+    "stdlib_calls": [
+      {
+        "src": null,
+        "file": 9,
+        "site_line": 12,
+        "site_byte": 362,
+        "name": "pwd",
+        "reason": "no-candidate-in-scope"
+      },
+      {
+        "src": null,
+        "file": 9,
+        "site_line": 13,
+        "site_byte": 382,
+        "name": "dirname",
+        "reason": "no-candidate-in-scope"
+      }
+    ],
+    "external_calls": [
+      {
+        "src": null,
+        "file": 9,
+        "site_line": 29,
+        "site_byte": 908,
+        "name": "python3",
+        "reason": "no-candidate-in-scope"
+      }
+    ]
+  },
+  {
+    "event": "file_skipped",
+    "path": "./scripts/nerd_icons/__pycache__/parser.cpython-313.pyc",
+    "reason": {
+      "kind": "builtin",
+      "detail": "__pycache__"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./scripts/nerd_icons/__pycache__/parser.cpython-312.pyc",
+    "reason": {
+      "kind": "builtin",
+      "detail": "__pycache__"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./scripts/nerd_icons/__pycache__/cache.cpython-313.pyc",
+    "reason": {
+      "kind": "builtin",
+      "detail": "__pycache__"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./scripts/nerd_icons/__pycache__/__main__.cpython-313.pyc",
+    "reason": {
+      "kind": "builtin",
+      "detail": "__pycache__"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./scripts/nerd_icons/__pycache__/__init__.cpython-313.pyc",
+    "reason": {
+      "kind": "builtin",
+      "detail": "__pycache__"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./scripts/nerd_icons/__pycache__/resolver.cpython-312.pyc",
+    "reason": {
+      "kind": "builtin",
+      "detail": "__pycache__"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./scripts/nerd_icons/__pycache__/ssh.cpython-313.pyc",
+    "reason": {
+      "kind": "builtin",
+      "detail": "__pycache__"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./scripts/nerd_icons/__pycache__/resolver.cpython-313.pyc",
+    "reason": {
+      "kind": "builtin",
+      "detail": "__pycache__"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/HEAD",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/config",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/info/exclude",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/index",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/heads/main",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/remotes/origin/HEAD",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/remotes/origin/main",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/36774de0b1c0c22359f3335f6d6ab1aded4c9f5b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/6c837650166042c512945bb55ea42ffd154f353f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/b82867f17fa8e90241c22179f597107f2c0ab9a2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/db4df198e4b1b17d08c52bc1ce40b232c19c5192",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/6261475edfd016f8c0d0f3feac7fffc6f6830411",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/31ba1bfd89861aac9c3737e592d90c2aff78c8fa",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/3dd48a981b41c6f7851a6ffc8047389e9569be91",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/8c568715920e16896a4dc38afae142546a56e915",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/e9becbb6b45067d35313f80ab8e38b34028e808f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/07473880e3d95a3f33224ff58401b233925a5f7d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/2ebb731df3890a4d316fa07928cb20e08099f873",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/758832f58ef12b8f8b7fd6551a5e6e2c19149c87",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/1b22388e34dbe2c2ce9c97d7b087e2c7d9802e5f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/eff0c9267761435526902900c3adb599a5e08c4d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/cb578dd28b774ff81bbdd6722dcab760b285434a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/28a56a5b67004008121c27a6f8505c8fc4eeec4a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/758793096255e1dd02f1ff8f60c9cd1199c673f6",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/f8dce135e03f7f5fee948811dacf47baaac48f65",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/e89ffb847da0c8846226479568ac5a036515fa1c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/42a9eda21b80a8787c6cd5714c703cf2ed50136e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/2905750490b9df42c0ef9dad41e5ca56b8b179b1",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/1ed3195324e58f0f65786565066659a06ea83bb5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/1cd62da53c12cdf6ca89a11d4cf2cccf93668148",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/83b655642d129a888fd410a1c2ba760689e55492",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/71a219510484b9cb4f7dbe80800777a5e39b19d9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/7da3c2f0a7a31ebf2349efd50ad5f3fec77c78db",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/b756a12f545c81e549b7dd4d491b5db5c2b322bd",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/378383d9dc1d6461b7f4007a14029ccf607c1d6b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/00ad7c374cfc015e128458991d21c2d7906408b9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/9e7e5177aca689e589b8ed91de7daa283f2b883d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/80f1dc018cd2cefd73f023ba0344bc81f046e3b8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/fbc5b34264c6f42c04981a29341398b0152047bb",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/24996f4f9741b45087c3cb1d4c0abe466ec47f9a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/24bb5412aac0e5671f6ca77d57bf15bf072ce2d3",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/46d6d151232535a4c522eb5c1b2341844f56f716",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/8fd9c4abb5aba8d78c8668115a1bdd576afb115a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/5b847e74de2e8fb6807c5ce4e6d03543dbbdb0da",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/4e2af29386ab126ffe5722bf04371be00faffb16",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/349857891e70e44e4f58cd42b9d17c3b320e4777",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/88a2d8a005de270b916a59780bd477651c805d5f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/76d6216359788f7bba092208d90c3f15206a4e0f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/b72ed501a71ab1e9cf390612e676ad7484fe722a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/9156ebc78de1a0a83bfc4baf5caac4d4f55cfe36",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/16941adc3218fac0f978b3c3a2a21c023fdc8721",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/0cd987fafb598c9f871283d663b4434f3bbe7a50",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/b93fca8697fd7169acff09aedcaf71c99da281f3",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/ca14716487d6565e1985252357eaf63c36ee0ed6",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/0d4eda4c7d69b5bcf93db1110b87d90300d76474",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/384504e9213c666b43647a1f1e9032d61d01b6ee",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/4a2d4efcb4fcef2ce94ca40acd2852e5f7c75526",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/447b3d7e8c56545f6654174f62ef02a90672c7f1",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/9658b5d5526a8eb1b216b58df16f947b5b989281",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/abacf01f9b5ffd9b3d1852e29c9a58c9ee283429",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/3734e9d6510df8e299fae2efd5a529d55c81499b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/ee7cdf4bcb3bfa68759fc7cbaa02b82c5a9731b8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/e8c6b3c105f85dda838acffad0eff5339ae48ec2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/634643057ef389850ce6025e9a03879da13c193b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/6c790996874cbf2285bc3e77ed76711d34b96013",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/e49c8dfe6285e0ab8b36e770b9121773b38b692a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/4b2b8b7297743efeff290f42c4c6699658ab94b3",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/85a68e8ae4a62659011367b9e74caea1fceaa9fc",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/3a73494519e730d60572eaec65ab4eb8bb02b01b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/750215f0ba64818f1d5c9cd8fdd263b5dad8339b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/be11e64a9c78ec7cc20de67deef2081e6c9098d5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/f3f049989e524ba3e6740b082c5ed725337cc7ed",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/e3ef24f5ad10ce6b7a93708137c33c014c1ab9b9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/1db0bbdcc1e94c84d9762e05082743fac4bf27a3",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/7928d5fa011f3c054cfcfaae5f275c9436cdfd6c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/e5e9aef6489f93fe6931914b8de4b3da1501a15d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/d76f724fb14419d3f02e8bc37aa28d2d9f31b7b6",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/42e3b66bd03c7676d2806312ae69ad6af38e6097",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/7d1397def91bb4942ff66e622b64be8f33530cd7",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/f7496feec71c0a72854ca2d55ba68009dedeae38",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/16e2148fdf87e6ca9089850ab343fc96f00ab026",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/201e9089a51d5fefa38882764f6b2efac8210873",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/f7e374a37c422784d4269868451026f8bd3690a3",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/871fa6d8c0948c3c67f7f911e21b901206903eaa",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/cfbe895b57b2469b2405e10e8b8e52c01c211513",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/3bbd5b37d7bdd7eb058cc1cd3c30811f6b7281ba",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/889af65be156eda7773958579604f736c17b4f1c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/d91eedc7f20f512102ac3dcaf12d8f9dabb34016",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/b3355e158d4241a4664839d6f103eb146e0cf727",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/c71521a200a8c59c80c9a2b978d61d7423e17d24",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/50936d590173b956902ba51df6bd3828fd9bfa8f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/030c332f6d2116ab4059d1b703f8a1386d7d3339",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/24b86f83527fd1770e6d2268f9de115c45af899b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/3e1a2d74812dfe60764fd4aed16f0f490a72cdb5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/1eda9fe15da2c83d25b9f0ec6b464f118de6aa1d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/9a68934364ed04c2b4a94bcadc930c79d006e1a2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/da044d062d808ff9a2dd62a33840ed75483d610e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/751f445dfa12ee1a0875f9f668bff4ff1e56deaf",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/d3febf9c9fe5e1c35e803bcae447d9a7211449f2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/7b53c39255b8ed3320ae043aad94534880127e13",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/4798cc5075a7d7fd6e98f05b77e5906ef5dd4f18",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/d4eefbba82c2e3b4e2926073e2b77e9b730931aa",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/109268aecfb8c8fe0cb9d8a2f5554fb13dc92580",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/adffbe94da8429a500015eb29bf205099e147286",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/1f1c151725eb4d76a4279b06fbfc7bedf6bff366",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/a570b94214752913d4537bf0db2c71255a255b7c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/ab4ba8d56c491ea78f1921458dff9007df43d6c8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/bdd811647b60b3f328a17f636111dbd3f52ccad9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/65f90e7d47b6d16f001c31de17c1b7aed5765e5c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/fd2ca917759b6e9127a9b2a390566a7525fefcf8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/a93b20f24e1958285089c84de82ddf95a467c157",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/ec22a4939f0cedc92e4377162a7c4cc3693d6a59",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/324b1130c01ebb675de0fd7a2a4a75591fcfd036",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/1cf263f5709f23024cc7c434449f8aee9c0a2128",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/027df0f36074bd408565a0fdb5df1e9980a035b5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/b35da618858b3f5716210da4c1141a69aa81c6ce",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/0470cec26479f697cbc3400ecab42b6ae894528b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/429bef905c86e454c99b5c28b49c6af2d7211e73",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/cc2f6ef489051af7c3c306815d2307b655ab239c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/c7c73ea19c1d6d26633226d44ceb0e598b6c2d77",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/7a77ec56d18afa7a49ece074fa79c95e1a33c3cc",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/76d5cb61ab10f4bce4ed41e2b15d41efb7ef53ee",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/9ed5e0fd5dd09da994034a783a6f8bf225092bb1",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/a89e80d0db08d94ceb4130d298ee6d1e773e4854",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/7fcbb99d7d0c526a702ed3e0f4f7b8e3540c40af",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/dfaf4e2da691ae7eb2da0a3c9c801ecc4ac76907",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/67c248024069de9466f73c2a21465e53b5c4c654",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/ead169aa3c9306644b9532f359332967f97e442f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/98ab412692c91bfeec64c9699f6d3bdbdaac054e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/1e8a8a3e37ee24b6cbb8d16c46db282e570e2eef",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/2672af618928df9815e2b9de8aba5cd0c5e6d34c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/04bc93e372bc9940c03195aa83176a630d1f7ba9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/618eb435af00a49c9e094cb78b35a898207acdaf",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/4d65df9ce5ce5a617856d108514bc810526840af",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/14cd37859c3819e5d6fe23093784308400a00ffe",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/727223b700d45710433c0a441b34c2c58d3f8545",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/4dd5f68e692568a8dcbf68a367478f7a4dcd7a3b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/c46c266ff8fa0d195c9dbddd280602201e1ef8ea",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/refs/jj/keep/21fa5ff4e018d2961981f2abf09cf3dc0a025c6b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/COMMIT_EDITMSG",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/FETCH_HEAD",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/logs/HEAD",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/logs/refs/heads/main",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/logs/refs/remotes/origin/HEAD",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/logs/refs/remotes/origin/main",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/hooks/applypatch-msg.sample",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/hooks/post-merge",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/hooks/pre-merge-commit.sample",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/hooks/pre-rebase.sample",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/hooks/fsmonitor-watchman.sample",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/hooks/pre-commit",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/hooks/pre-commit.sample",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/hooks/post-update.sample",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/hooks/prepare-commit-msg.sample",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/hooks/docs.url",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/hooks/pre-push.sample",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/hooks/commit-msg.sample",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/hooks/pre-applypatch.sample",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/c5/dd126ff73d5e8e73eec5d0160afeafa4967be2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/f3/f049989e524ba3e6740b082c5ed725337cc7ed",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/f3/41ea592e29aedd74bccb299b1e2a65e6e2adf2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/72/88439e434d1826485b0cc110fc31cabf4d254e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/72/7223b700d45710433c0a441b34c2c58d3f8545",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/f0/e33b6bc31b6b856504234b4517a8cbb1138832",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ca/14716487d6565e1985252357eaf63c36ee0ed6",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/9d/13e4783718122df12874b821ba29e2e2a3d861",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/9d/827f2f85f5ca2da22151e04ef5f1b4ee565a19",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/cd/8cea74fe2d1f0f8de6077d2645abede9eadba7",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/3f/3558bca81d477ebbdd55ce358d28425fb1eed4",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/3f/ca4a726a346642dc7613cf053f11ee10452804",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/3f/5e261a09313ab8eaffb43e2a8c9a73756baca7",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/1f/1c151725eb4d76a4279b06fbfc7bedf6bff366",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/f9/b2d1783bf1d23d180308c1eaa05bdc1fab020f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ea/d169aa3c9306644b9532f359332967f97e442f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e4/413ebd4b61fd260be16fe4c982603785eb8fba",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e4/00c26d9e917fced4c6e8d74b0063fdd931bc9b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e4/c6aed2b81ccf5f37a7754a0ed4ae44e4e331cf",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e4/9c8dfe6285e0ab8b36e770b9121773b38b692a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e4/f890734215aca018db0de3ca78f326683d125c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/f2/427856e2cc2108d903a48af3772b975b6324fe",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/86/225f7c98520750dc86cf67bd2496ca09b19e31",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/74/ba7248b0391060ff103a61a4d6be0487e13a15",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/03/9b31e8fb471c57b3dbbb582414bd6e5766f99d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/03/0c332f6d2116ab4059d1b703f8a1386d7d3339",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/2e/bb731df3890a4d316fa07928cb20e08099f873",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/61/8a4ae09d7634dae17409999bcd2a873db7e187",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/61/e5395673c402f2f8b0ec2da9872e35b00558b1",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/61/8eb435af00a49c9e094cb78b35a898207acdaf",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/19/f3cf9a92b707981c6747af52233ab11e5f5d7e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/19/be621e6f998af40399ddbd3297c2963f32b9f2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/19/068a8e09270458f66f3cb37488f2e05b921689",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/47/98cc5075a7d7fd6e98f05b77e5906ef5dd4f18",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/28/a56a5b67004008121c27a6f8505c8fc4eeec4a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/17/f750d9584ad56b70a45449b7c65088a55a33f6",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/a6/949592d0a1192e920f4a30a1d543c7041f1ef9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/34/9857891e70e44e4f58cd42b9d17c3b320e4777",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/34/cf828e5d42db050a0699cec48e8bf07aef628a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/29/251eb5624de72621a4f17dbaf480da57603325",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/29/05750490b9df42c0ef9dad41e5ca56b8b179b1",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/29/97968911dae3dadd39b120e5091c6262287cb5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/42/9bef905c86e454c99b5c28b49c6af2d7211e73",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/42/a9eda21b80a8787c6cd5714c703cf2ed50136e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/42/e3b66bd03c7676d2806312ae69ad6af38e6097",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/76/d6216359788f7bba092208d90c3f15206a4e0f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/76/d5cb61ab10f4bce4ed41e2b15d41efb7ef53ee",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/1c/d62da53c12cdf6ca89a11d4cf2cccf93668148",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/1c/f263f5709f23024cc7c434449f8aee9c0a2128",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/1c/f0fdc32a2c0a881b463af73c8746496e992b27",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/8c/568715920e16896a4dc38afae142546a56e915",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/8c/fd3b67bc27c65d83621362340f5e51d931cd00",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/df/9940671b073a80c579e341e692d8fe18f1c10d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/df/af4e2da691ae7eb2da0a3c9c801ecc4ac76907",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/df/f8802ed1dad8c6f8ae9e06a6c9a46acf88099d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/7e/afde484a55e8bad4e183a72cac6e688f57a0ea",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/7e/814c90d5ec5895de8c63a8342450be28d70eec",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/6c/51cc166b70676dfeb83465a07e4e3db5d53265",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/6c/837650166042c512945bb55ea42ffd154f353f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/6c/790996874cbf2285bc3e77ed76711d34b96013",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/6c/8127a96bb74874a3179a60a6263b091c04113f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/6c/7f6f4dfb1b51f6bd7c308bb1abfab8e2f51280",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b5/3c58f969da7918cd32369deec6bf8cdf2e643a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/aa/680e080663fb214fe1fcea27956bfbd75ad5a0",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/24/b86f83527fd1770e6d2268f9de115c45af899b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/24/bb5412aac0e5671f6ca77d57bf15bf072ce2d3",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/24/996f4f9741b45087c3cb1d4c0abe466ec47f9a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/cb/c4b0de38133526fb24a1fa2babe1a581ecbff9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/cb/578dd28b774ff81bbdd6722dcab760b285434a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/cb/a0eac72ed73f2c28eead9ed8108c72f540b964",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/04/bc93e372bc9940c03195aa83176a630d1f7ba9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/04/70cec26479f697cbc3400ecab42b6ae894528b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/04/63822e61d458ae9c9a41bf116f22ce311f76f9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/99/8d672b023d6efda8be3ae465f971d16d9c8b87",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/c7/1521a200a8c59c80c9a2b978d61d7423e17d24",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/c7/4d8fffde9f8bdb989055c0f98268891e5c7b65",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/c7/c73ea19c1d6d26633226d44ceb0e598b6c2d77",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/c7/ab07105759a4dfef40a610265451fb8c595680",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/c7/87975e1ff5b452ae3e29c250bf7fcf77f64789",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/0e/70148af74835a65c05249c44d32b14a2fafc04",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/fe/b22fe949107143522e38c5fee34f6107dc2e6a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e9/becbb6b45067d35313f80ab8e38b34028e808f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/87/1fa6d8c0948c3c67f7f911e21b901206903eaa",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/90/f195b47e892deba1b07e4af3f98410ca417ce8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/cf/5651cbf222c7f249dc5f511e9c83069fa9ae8e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/cf/e0e2f20532984233507a0896b78e4edbf7938a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/cf/be895b57b2469b2405e10e8b8e52c01c211513",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/f8/76ff8892f4a3f1d1a47383794d81763030ffe7",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/f8/4b921c3fe919208a5e106bcdf5650000949586",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/f8/dce135e03f7f5fee948811dacf47baaac48f65",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/a5/70b94214752913d4537bf0db2c71255a255b7c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/60/c9354a635e148aa77d1592a2e41c2250fc9a63",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/60/8bde9e4fa847abf3c48235147a76241608c6c1",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/93/6c19b5ed881e3eb175978201ac6e8db45dc0ea",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ef/00b6f773442bcacbfa375acdbd817ac6657249",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ef/f0c9267761435526902900c3adb599a5e08c4d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/91/fae4436bd42523036b180556af31f60ebb1e4a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/91/56ebc78de1a0a83bfc4baf5caac4d4f55cfe36",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/20/60bee4b648643f79d7f5a072bc34056686f6e1",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/20/1e9089a51d5fefa38882764f6b2efac8210873",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/73/8fcf93024784f7e65298aea5a67b2bc6e0fe5d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/0c/d987fafb598c9f871283d663b4434f3bbe7a50",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/30/5eb2a5cd2fe2446b2e89f35ca4f8fe3e41594f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/30/939e0061f7a8613062402861aef7d3219dc2fd",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/57/96c33bee2d7816cbb73c5521aec59551f561bb",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/57/9a0b67b2e7bf3b7b0ef12fe89cb98d20044745",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/57/0b18393fe9e6f2de51c097ef9932c7cc133319",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/57/22ad283cf1b1963d69e5f303b90fc0952f16ef",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/07/473880e3d95a3f33224ff58401b233925a5f7d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ab/acf01f9b5ffd9b3d1852e29c9a58c9ee283429",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ab/4ba8d56c491ea78f1921458dff9007df43d6c8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/88/9af65be156eda7773958579604f736c17b4f1c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/88/4b69eae45e27f0237e59f2aed9adf1b1671771",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/88/a2d8a005de270b916a59780bd477651c805d5f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/75/8793096255e1dd02f1ff8f60c9cd1199c673f6",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/75/8832f58ef12b8f8b7fd6551a5e6e2c19149c87",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/75/0215f0ba64818f1d5c9cd8fdd263b5dad8339b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/75/1f445dfa12ee1a0875f9f668bff4ff1e56deaf",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/75/b65b28ab708a697c4b97871c07dcb5fb034ecc",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/80/f1dc018cd2cefd73f023ba0344bc81f046e3b8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/80/7d5983db8974da81873898c775358439450353",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/45/a299c92b22f9d646f902798a0ace52c5eb7d5d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b8/2867f17fa8e90241c22179f597107f2c0ab9a2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b8/a7bc0238c53908f525c119a62645d3583af918",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/fb/c5b34264c6f42c04981a29341398b0152047bb",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/fb/420b246a070cd789cbc0bbab87f226eac9f6a7",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/7b/53c39255b8ed3320ae043aad94534880127e13",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/7b/85e86de06885059e80dd288ff66381ad048bc4",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/71/a219510484b9cb4f7dbe80800777a5e39b19d9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e3/ef24f5ad10ce6b7a93708137c33c014c1ab9b9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e3/aa5de14a713e536e5876ad1d705633504a5fb9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/6e/9ad6d12c7aa378ad5f1f18c43ec1ae9384a2fe",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/6e/0e6ad3ea710ef1570e0c3527c142b6eeedb3ac",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/6e/8caabb8ef2a3bd4c42b148301731a524fbb6e1",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/4c/a3742af551f438c1d90f84e5c2ef9b61db209c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/3e/9adc6e6524ecebed45749780f20e0bd233634e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/3e/1a2d74812dfe60764fd4aed16f0f490a72cdb5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/3b/c85eb71c5af7594b82157aecc278c8f06312cc",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/3b/ca1fb324ad6ebb5f06da64a527cee0cebcb42e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/3b/bd5b37d7bdd7eb058cc1cd3c30811f6b7281ba",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/a2/60a8ae82c2f629bff9d11992fc2838e645507e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/fa/5604b0842310a222e61791125c7f1275f249de",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/36/774de0b1c0c22359f3335f6d6ab1aded4c9f5b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/8f/d9c4abb5aba8d78c8668115a1bdd576afb115a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/98/ab412692c91bfeec64c9699f6d3bdbdaac054e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/37/34e9d6510df8e299fae2efd5a529d55c81499b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/37/8383d9dc1d6461b7f4007a14029ccf607c1d6b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/4b/2b8b7297743efeff290f42c4c6699658ab94b3",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/4b/835885e2fd0c7b0cb22d1d3431bad67a6cd5d8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/4b/825dc642cb6eb9a060e54bf8d69288fbee4904",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/40/dc2d47bea7930726069762556fba9283972752",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/4e/2af29386ab126ffe5722bf04371be00faffb16",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/4e/fddcb20f18502d22d0cf3becc545f08f3f7e68",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/bd/d811647b60b3f328a17f636111dbd3f52ccad9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/5c/e8292653691d5dddb24527b1af669f3e8b380a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/a9/3b20f24e1958285089c84de82ddf95a467c157",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/3a/73494519e730d60572eaec65ab4eb8bb02b01b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e8/c6b3c105f85dda838acffad0eff5339ae48ec2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e8/d602e763c2ab6ae0dc830260a8864095668ce7",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e8/9ffb847da0c8846226479568ac5a036515fa1c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e8/6f33a7691f7334d5eed94a52cb79efce797001",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/97/bbb5a833847741216c6e0c5e82ab0ca839fc8e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/97/d5602456fcdfd9b574e7487ce20fca828157b8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/da/044d062d808ff9a2dd62a33840ed75483d610e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/3d/d48a981b41c6f7851a6ffc8047389e9569be91",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/d9/0c3726b570a284aead40f7971ee290b620d447",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/d9/1eedc7f20f512102ac3dcaf12d8f9dabb34016",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/3c/d9d5343df6c427727d63cb1f18eebb4b040b7b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/0d/4eda4c7d69b5bcf93db1110b87d90300d76474",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/be/11e64a9c78ec7cc20de67deef2081e6c9098d5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/9a/c2f71a807c378949e7b4fd3704d03b3498f0bb",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/9a/68934364ed04c2b4a94bcadc930c79d006e1a2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/9a/b3370077e4c48d61a0b779e216b3515f837fd2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/46/733e1f6441acd219bfc91b020b648f474c7106",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/46/d6d151232535a4c522eb5c1b2341844f56f716",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/46/00b10358595653be86555b05fa1c62e105512e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b3/355e158d4241a4664839d6f103eb146e0cf727",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b3/5da618858b3f5716210da4c1141a69aa81c6ce",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b3/f86d30bab24ba7b7cf148e131725d0912b8959",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/de/727d342f8e882bb32e73e5bb58e4b4d1e8d3de",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/0f/ee2b63a89e0993793538a887c7a61fc719f08c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/22/f397b1b1cde8dafc878c825fddca8f0f997e74",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/50/f281f032bb69c9e5eff0ef7ecbfdbc34448ad5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/50/936d590173b956902ba51df6bd3828fd9bfa8f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/94/664f5d2ca6ca4648ebec071d34e70b9891ad23",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/62/61475edfd016f8c0d0f3feac7fffc6f6830411",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/66/074b6ef10540eeeeaa822ba2713f9148c312e9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/5d/44838c3fab10176adf63ebe09d2356a552dacf",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/5d/c38902e68e02257ab2964cbb5d8664eae30e0b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b9/14ac0b0c6dc49587be435fdc6c37de89f0dee5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b9/3fca8697fd7169acff09aedcaf71c99da281f3",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/1b/6f2bcaadd99c2c53ddd5a38a7edbc8fbab58ea",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/1b/22388e34dbe2c2ce9c97d7b087e2c7d9802e5f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/6b/829e697b0aa3ca0760fb86f5ce1a15bf63ad15",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/8e/c32cd8a64bd46a0e8ea5d79e9374e95b4e9cc9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/8b/6d4ff557583e0880dd99b63a7279652d1c72cb",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/8b/afebd78f1cdc6968bcf6542e09e027496c2551",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/1e/4cf73dc73a1dd122716d3098c69e9d312a05fe",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/1e/da9fe15da2c83d25b9f0ec6b464f118de6aa1d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/1e/8a8a3e37ee24b6cbb8d16c46db282e570e2eef",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/1e/d3195324e58f0f65786565066659a06ea83bb5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/2c/4748b24c454a004c04c11dc419f0b473cfc0a9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/2c/526717a26bdddc4c7c62fb0ec7eb35d946d605",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ff/b7111f7152de0c890888b46d02ab4dcaa670d8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/52/f9da8bada9c8465e210aa488b64ea3e980c792",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/5a/15de64f4ddde0d3a5074f4112dfc834a191ca6",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/33/0096bba3cf85d50ae48354cd4ad5e7eb20c75e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/d7/6f724fb14419d3f02e8bc37aa28d2d9f31b7b6",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/d7/125715d15be5cfb133d0400d6499189e5cfed7",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/d5/ce55acfe42263657a6e2bbd9f4817fa5835ec2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ee/9c5271cdaada58ecf262e19de0477c1e033eb8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ee/7cdf4bcb3bfa68759fc7cbaa02b82c5a9731b8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/00/ad7c374cfc015e128458991d21c2d7906408b9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/00/f9ceb2940dd04a0f325567dc81bf23511481b5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/32/4b1130c01ebb675de0fd7a2a4a75591fcfd036",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/67/585acb3e1e285188963d9d82fafcf3d0abe376",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/67/0299958ee680ca9feff037771f21d4de25c53a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/67/ca9098249cc813425fb2d6e8fa31350e677762",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/67/c248024069de9466f73c2a21465e53b5c4c654",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/79/28d5fa011f3c054cfcfaae5f275c9436cdfd6c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/79/3be89c4df43a3ee3ce24584093f5a1a3aa21f1",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/79/f65213f2e012bcd43ebd2ef290cb17466c66fe",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b7/2ed501a71ab1e9cf390612e676ad7484fe722a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b7/56a12f545c81e549b7dd4d491b5db5c2b322bd",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/6d/5c2e2ea83d51632f389def257c941b1367e87a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ce/1d16397ed4b6c06ca291dde41ccebf5d59352d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ce/8bf0c5b27ecc4e609279d6e1c1c8f76dcc4757",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/5e/d70adcd16bebb3a86a5ac294835ba5d2beb716",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/44/7b3d7e8c56545f6654174f62ef02a90672c7f1",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e1/f562726e73203f671039967f8a06cb5ada2e28",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e1/046257a5044d92bb2202becc2fe5b0a27a961f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e1/49f7b3b1917914f58678e7c7d9f52074a90314",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/2a/bee076df5c4c27a074b89d8ab62df00edcaa91",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/31/ba1bfd89861aac9c3737e592d90c2aff78c8fa",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ad/ffbe94da8429a500015eb29bf205099e147286",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/4d/65df9ce5ce5a617856d108514bc810526840af",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/4d/d5f68e692568a8dcbf68a367478f7a4dcd7a3b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/7f/b713b061ac956ec27b8d3f45d03b96d9813be5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/7f/cbb99d7d0c526a702ed3e0f4f7b8e3540c40af",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/2b/505548c6880f938575bdbb4df74ef67eec03de",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/54/ba18903d1407476c41f7cfe00b15b4e0fa941c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/54/85166421534bc58c7c56cb692e0abd096b6da5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/54/efefe9002016dcc0480383adba5afdaacf4752",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e0/cb009f3d7b5b3c27ffb26deb02ee11b4374a9c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e0/31030bb9c98d6f2cd895ffe00547c2208c0f76",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e5/e9aef6489f93fe6931914b8de4b3da1501a15d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/7d/a3c2f0a7a31ebf2349efd50ad5f3fec77c78db",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/7d/1397def91bb4942ff66e622b64be8f33530cd7",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/63/1a904d68d7a4422d8cb9a4095e87bdcae55f5a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/63/4643057ef389850ce6025e9a03879da13c193b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/63/614f84bcd3165657172ae39a79a4dff8e72b1c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/63/3ee07c3158bf5a40014eba443e4f868ac4a903",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/63/bf3d2753ce49d16312484515bb426aaeb0f525",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/9e/d5561b60accf13d2408edb9bcf4ca019a31c2d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/9e/7e5177aca689e589b8ed91de7daa283f2b883d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/9e/d5e0fd5dd09da994034a783a6f8bf225092bb1",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/58/947b10a74b554886dfd4f0a63f8ca4917c895b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/58/b462930a85c1d23b69194f7e26d6fd5aaff269",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/08/691a3fcbde540dd1fe68dc40de52574fd5acdb",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/16/77cdac1f98ea7d55245ab99f4732fa7f76122a",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/16/e2148fdf87e6ca9089850ab343fc96f00ab026",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/16/941adc3218fac0f978b3c3a2a21c023fdc8721",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/16/d268228c6d77c5be2aa24c8ed1bffb8e880253",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/82/bc559defcd66fb670127e96986e0ac8f7d6d25",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/53/b86d9e390c6f1c53157051b17e6595b4bda4a4",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/53/4e454d04dd84efb406bd7ea824737ec9de7511",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/a8/9e80d0db08d94ceb4130d298ee6d1e773e4854",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/a8/99cf90b0a7e849de582f0439675d34ddc3b021",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/a8/9d3fc776260573c6ef02ecff0756921cb7243b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ec/22a4939f0cedc92e4377162a7c4cc3693d6a59",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/83/b655642d129a888fd410a1c2ba760689e55492",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/83/7a1cfa81ea26382dbe1e1b73b3492682a01c85",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/83/e322672eb232875db52daa0f70e2f035c1006b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b0/b5fc98ca5c429fe9ddcb4d066f65a09a63a426",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/eb/8299123d2a588cf1872a8929105d41919eec0e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/f7/e374a37c422784d4269868451026f8bd3690a3",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/f7/496feec71c0a72854ca2d55ba68009dedeae38",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/f7/da6988dd0986ab0065ce8dcd5861f456ad9981",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/ac/d517a5d62cde030edf6f8a806386f526150603",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/92/3e4739dd3ce6a5880546761b40be866db75906",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/5f/a39787dd21c1b8d4251da7f6ea385f07a5affb",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/5f/e3e08b53d6ff84f25b5757c4f2f4f28dfc9f16",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/14/cd37859c3819e5d6fe23093784308400a00ffe",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/14/0283bf729850c8b33f89c8a1a5bfb1f3b267df",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/14/0650702103e40c81d6c48884422de3f6732dbe",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/10/9268aecfb8c8fe0cb9d8a2f5554fb13dc92580",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/a7/45af12e3ddd1e7bc29cc25b006e2ae61e7ff55",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/48/ba237b7982e2ab53ffeef1cd619b17ff128d3c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/27/613fbf70562a4892a3af902027fea560840582",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/cc/2f6ef489051af7c3c306815d2307b655ab239c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/cc/3bc6e7c33349fe63d7bfe42c2c3b9be1e777d4",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/cc/ce9fe63a6e995c0cd00d2861d38e52f36c9abb",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/5b/6d2f7c5839bef417176b839733856c11aaa61f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/5b/d9ee2e2f141ae7e8e4764701001c670f5b47ac",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/5b/847e74de2e8fb6807c5ce4e6d03543dbbdb0da",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/89/2b0fde65c4dbd14d65ac132351dd647adbb989",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/26/4d1cd5555f3041f9f69fce2ff2ac39967e65f9",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/26/72af618928df9815e2b9de8aba5cd0c5e6d34c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/bb/3ab14afea3ac5be78f12fbb25fbfa9b756a619",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/1d/cbbaa6e73fc10218c19f876ab4cc0c55c313e2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/1d/01478749aced37cd618b415d47281653f5c454",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/1d/b0bbdcc1e94c84d9762e05082743fac4bf27a3",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/85/237ff5c7ce50a73d35b570e8333409991f80b3",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/85/a68e8ae4a62659011367b9e74caea1fceaa9fc",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b6/0ec9a822e42170897b6ebcbce7dae0f17e8364",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b6/405d64f602e495a3f628675b8cefcd4d89bcb8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b2/feee6c7b39bf90f14a0c24f183f3449cf1d1d6",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/7a/77ec56d18afa7a49ece074fa79c95e1a33c3cc",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/d3/febf9c9fe5e1c35e803bcae447d9a7211449f2",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/db/a61d71452b41a569473ae7afa1a4130eec0b08",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/db/4df198e4b1b17d08c52bc1ce40b232c19c5192",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/65/f90e7d47b6d16f001c31de17c1b7aed5765e5c",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/65/0cd444a267e4eaf93c73272fb592230271cea7",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/68/3dec98ea9f3e68b573a984546ead2a2edc2bed",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/68/ff9d968722430d3fb6d7594ecb3007b8707b32",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/c3/ecf4470b66ca9658215a491b8c8d464927f175",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/c4/6c266ff8fa0d195c9dbddd280602201e1ef8ea",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/f4/66952f887cd73e5355eb3badcd671c7f5d0e8d",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/02/7df0f36074bd408565a0fdb5df1e9980a035b5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/0b/0dadefc6761f10f2ca1647e65dd5db4642184e",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/43/c994c2d3617f947bcb5adf1933e21dabe46bb5",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/b1/83221dbecd83a56a5d22e70d2a9bb696d0a0f4",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/8d/04052b078d57a6bae4d793d3df49a16ebc57ff",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/4a/2d4efcb4fcef2ce94ca40acd2852e5f7c75526",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/d4/eefbba82c2e3b4e2926073e2b77e9b730931aa",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/21/fa5ff4e018d2961981f2abf09cf3dc0a025c6b",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/c6/643d4d69ada929d20fe249cd9e7ddc4e2f4998",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/f1/37f9f617f4289121ae80b356f1ca68852fdcca",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/38/4504e9213c666b43647a1f1e9032d61d01b6ee",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/c8/d369a9825927db84c13615067ff042a1b6d0d0",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/c8/c255e1d1f3f662014c9a2e0b2288aef190edec",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/d2/7a1db571d8f5ac7c319577295fac47e6dcfbb3",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/fd/2ca917759b6e9127a9b2a390566a7525fefcf8",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/78/629bc27f34521712ca3b653486646c3c041bbd",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/96/58b5d5526a8eb1b216b58df16f947b5b989281",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/objects/96/439e0158c35931abafb4d1689b40d99263c93f",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "file_skipped",
+    "path": "./.git/description",
+    "reason": {
+      "kind": "builtin",
+      "detail": ".git"
+    }
+  },
+  {
+    "event": "run_finished",
+    "metrics": {
+      "wall_ms": 24.548982,
+      "phases": {
+        "walk_ms": 21.524216999999997,
+        "parse_ms": 5.201806,
+        "extract_ms": 0.0,
+        "resolve_ms": 0.082926,
+        "link_ms": 0.878781,
+        "query_ms": 0.0,
+        "format_ms": 0.0
+      },
+      "files_discovered": 541,
+      "files_analyzed": 10,
+      "files_skipped": 531,
+      "files_errored": 0,
+      "bytes_processed": 43623,
+      "callables": 43,
+      "edges": 68,
+      "unresolved_calls": 8,
+      "stdlib_calls": 67,
+      "external_calls": 108,
+      "ffi_detected": 0,
+      "ffi_resolved": 0,
+      "cache": {
+        "hits": 0,
+        "misses": 0,
+        "bytes_read": 0,
+        "bytes_written": 0
+      },
+      "peak_rss_bytes": 0,
+      "by_language": {
+        "bash": {
+          "files": 4,
+          "callables": 11,
+          "edges": 12,
+          "unresolved": 6,
+          "stdlib": 9,
+          "external": 23
+        },
+        "python": {
+          "files": 6,
+          "callables": 32,
+          "edges": 49,
+          "unresolved": 2,
+          "stdlib": 58,
+          "external": 85
+        },
+        "skip:builtin": {
+          "files": 504,
+          "callables": 0,
+          "edges": 0,
+          "unresolved": 0,
+          "stdlib": 0,
+          "external": 0
+        }
+      },
+      "cycles": [],
+      "longest_path_len": 0,
+      "confidence_histogram": {
+        "high": 61,
+        "medium": 7,
+        "low": 0
+      }
+    }
+  }
+]
