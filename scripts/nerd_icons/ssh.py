@@ -16,11 +16,31 @@ if TYPE_CHECKING:
 _SSH_COMMANDS: frozenset[str] = frozenset(("ssh", "slogin", "mosh", "mosh-client"))
 
 # SSH options that consume the next argument
-_SSH_OPTIONS_WITH_ARG: frozenset[str] = frozenset((
-    "-b", "-c", "-D", "-E", "-e", "-F", "-I", "-i", "-J",
-    "-L", "-l", "-m", "-O", "-o", "-p", "-Q", "-R", "-S",
-    "-W", "-w", "-B",
-))
+_SSH_OPTIONS_WITH_ARG: frozenset[str] = frozenset(
+    (
+        "-b",
+        "-c",
+        "-D",
+        "-E",
+        "-e",
+        "-F",
+        "-I",
+        "-i",
+        "-J",
+        "-L",
+        "-l",
+        "-m",
+        "-O",
+        "-o",
+        "-p",
+        "-Q",
+        "-R",
+        "-S",
+        "-W",
+        "-w",
+        "-B",
+    )
+)
 
 
 def parse_ssh_host(cmdline: str | Sequence[str]) -> str | None:
@@ -111,7 +131,7 @@ def get_foreground_cmdline(pane_pid: int) -> list[str]:
             stat_content = f.read()
 
         close_paren = stat_content.rfind(")")
-        rest = stat_content[close_paren + 2:]
+        rest = stat_content[close_paren + 2 :]
         rest_fields = rest.split()
         tpgid = int(rest_fields[5])
 

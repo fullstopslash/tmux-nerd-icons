@@ -42,9 +42,7 @@ def get_config(config_path: str) -> ParsedConfig:
         current_mtime = -1.0
 
     cache_invalid = (
-        _config_cache is None
-        or path != _config_path_cache
-        or current_mtime != _config_mtime
+        _config_cache is None or path != _config_path_cache or current_mtime != _config_mtime
     )
 
     if cache_invalid:

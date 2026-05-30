@@ -8,6 +8,7 @@ Security: 1MB max file size.
 
 from __future__ import annotations
 
+import contextlib
 import os
 from collections.abc import Iterator
 from dataclasses import dataclass, field
@@ -242,15 +243,11 @@ def _parse_config_section(lines: list[str]) -> IconConfig:
         elif norm_key == "activity_pulse":
             config.activity_pulse = _parse_bool(value)
         elif norm_key == "pulse_interval_ms":
-            try:
+            with contextlib.suppress(ValueError):
                 config.pulse_interval_ms = int(value)
-            except ValueError:
-                pass
         elif norm_key == "pulse_duration_ms":
-            try:
+            with contextlib.suppress(ValueError):
                 config.pulse_duration_ms = int(value)
-            except ValueError:
-                pass
         elif norm_key == "index_color_active" and value:
             config.index_color_active = value
         elif norm_key == "index_color_inactive" and value:

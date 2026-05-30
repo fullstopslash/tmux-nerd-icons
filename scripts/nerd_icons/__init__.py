@@ -10,4 +10,4 @@ Exports:
 from .parser import ParsedConfig, load_config
 from .resolver import IconResult, resolve_icon
 
-__all__ = ["resolve_icon", "load_config", "IconResult", "ParsedConfig"]
+__all__ = ["IconResult", "ParsedConfig", "load_config", "resolve_icon"]

@@ -35,7 +35,9 @@ def main() -> int:
     parser.add_argument("--session-only", action="store_true", help="Only resolve session icon")
 
     output_mode = parser.add_mutually_exclusive_group()
-    output_mode.add_argument("--tsv", action="store_true", help="Output as TSV (icon, multi_pane_icon)")
+    output_mode.add_argument(
+        "--tsv", action="store_true", help="Output as TSV (icon, multi_pane_icon)"
+    )
     output_mode.add_argument("--json", action="store_true", help="Output as JSON")
 
     args = parser.parse_args()
