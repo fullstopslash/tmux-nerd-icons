@@ -23,20 +23,7 @@ verify: lint test build
 
 # Bump version in pyproject.toml
 bump level="patch":
-    #!/usr/bin/env bash
-    set -euo pipefail
-    file="pyproject.toml"
-    current=$(grep '^version = ' "$file" | head -1 | sed 's/version = "\(.*\)"/\1/')
-    IFS='.' read -r major minor patch <<< "$current"
-    case "{{ level }}" in
-        major) major=$((major+1)); minor=0; patch=0 ;;
-        minor) minor=$((minor+1)); patch=0 ;;
-        patch) patch=$((patch+1)) ;;
-        *) echo "error: level must be patch, minor, or major" >&2; exit 1 ;;
-    esac
-    next="${major}.${minor}.${patch}"
-    sed -i "s/^version = \"${current}\"/version = \"${next}\"/" "$file"
-    echo "bump: ${current} → ${next}"
+    uv version --bump {{level}}
 
 # Verify + bump + jj commit + push to all remotes
 commit +message:
