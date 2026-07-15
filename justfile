@@ -25,7 +25,8 @@ verify: lint test build
 bump level="patch":
     uv version --bump {{level}}
 
-# Verify + bump + jj commit + push to all remotes
+# Bump + verify + jj commit + push to all remotes.
+# Failed verify aborts after the bump — retry bumps again; version gaps accepted.
 commit +message:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -40,8 +41,8 @@ commit +message:
             ;;
     esac
     [ -n "$MESSAGE" ] || { echo "error: commit message required" >&2; exit 1; }
-    [ "$SKIP_VERIFY" = 1 ] || just verify
     just bump patch
+    [ "$SKIP_VERIFY" = 1 ] || just verify
     jj describe -m "$MESSAGE"
     BOOKMARK=$(jj log -r '@ | @-' --no-graph -T 'bookmarks ++ "\n"' 2>/dev/null \
         | tr ' ' '\n' | grep -v '@' | grep -v '^$' | sed 's/[*?]\+$//' | head -1)
