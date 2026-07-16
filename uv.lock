@@ -166,7 +166,7 @@ wheels = [
 
 [[package]]
 name = "tmux-nerd-icons"
-version = "0.1.5"
+version = "0.1.7"
 source = { virtual = "." }
 
 [package.dev-dependencies]
