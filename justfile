@@ -43,6 +43,7 @@ commit +message:
     [ -n "$MESSAGE" ] || { echo "error: commit message required" >&2; exit 1; }
     just bump patch
     [ "$SKIP_VERIFY" = 1 ] || just verify
+    just todo-sync || true   # reconcile beads <-> Taskwarrior/todo.md
     jj describe -m "$MESSAGE"
     BOOKMARK=$(jj log -r '@ | @-' --no-graph \
         -T 'local_bookmarks.map(|b| b.name() ++ "\n").join("")' | head -1)
@@ -90,3 +91,15 @@ commit +message:
         -T 'if(empty, "empty", "dirty") ++ "-" ++ if(description, "desc", "nodesc")')
     [ "$WC_STATE" = "empty-nodesc" ] || jj new
     exit $PUSH_FAILED
+
+# Reconcile beads <-> Taskwarrior/todo.md via the generalized `todo-sync`
+# script (canonical source: rain/just-spec bin/todo-sync; install once with
+# `just install`). Thin wrapper: runs vendored ./bin/todo-sync if present, else
+# the installed one on PATH, else no-op. Logic + contract: api.md § todo-sync.
+# Flags: --dry (report only) · --reverse-off (never close a bead)
+# Usage: just todo-sync [--dry] [--reverse-off]
+todo-sync *flags:
+    #!/usr/bin/env bash
+    if [ -x bin/todo-sync ]; then exec bin/todo-sync {{ flags }}; fi
+    command -v todo-sync >/dev/null 2>&1 && exec todo-sync {{ flags }}
+    exit 0
