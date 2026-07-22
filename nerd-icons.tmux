@@ -88,6 +88,20 @@ main() {
 
     local RING='#{?#{==:#I,1},#{@RING_1},#{?#{==:#I,2},#{@RING_2},#{?#{==:#I,3},#{@RING_3},#{?#{==:#I,4},#{@RING_4},#{?#{==:#I,5},#{@RING_5},#{?#{==:#I,6},#{@RING_6},#{?#{==:#I,7},#{@RING_7},#{?#{==:#I,8},#{@RING_8},#{?#{==:#I,9},#{@RING_9},#{?#{==:#I,10},#{@RING_10},#I}}}}}}}}}}'
 
+    # Window name, guarded against being empty.
+    #
+    # automatic-rename-format runs our resolver through #(), which tmux
+    # evaluates asynchronously — it yields "" until the job first reports.
+    # A window that is created before that lands (typically the session's
+    # first window) keeps an empty name, and #W then expands to nothing.
+    # That collapses the bubble to ring+padding: the text run between the
+    # icon-colour and the trailing-colour escapes is empty, so the segment
+    # is narrower than its neighbours and every tab after it shifts — which
+    # reads as corrupted colour on the first tab specifically. Falling back
+    # to the pane command keeps the segment width honest until the rename
+    # lands, after which #W wins again.
+    local WNAME='#{?#W,#W,#{pane_current_command}}'
+
     # ── Active window format ──────────────────────────────────
     # Left sep: bg=inact if prev, bg=default if first
     # Ring: prefix(13) > zoomed(161) > default
@@ -96,7 +110,7 @@ main() {
     local ACTIVE=""
     ACTIVE+="#{?#{window_start_flag},#[fg=${ab}#,bg=default],#[fg=${ab}#,bg=${ib}]}${TL}"
     ACTIVE+="#[bg=${ab}]#{?client_prefix,#[fg=colour13],#{?window_zoomed_flag,#[fg=colour161],#[fg=${ra}]}} ${RING}"
-    ACTIVE+="#[fg=${ic}]#W  "
+    ACTIVE+="#[fg=${ic}]${WNAME}  "
     ACTIVE+="#{?#{window_end_flag},#[fg=${ab}#,bg=default],#[fg=${ab}#,bg=${ib}]}${TR}"
 
     # ── Inactive window format ────────────────────────────────
@@ -113,7 +127,7 @@ main() {
     # Content (all inactive)
     local CONTENT=""
     CONTENT+="#[bg=${ib}]#{?#{window_bell_flag},#[fg=colour196],#{?#{window_activity_flag},#[fg=colour75],#[fg=${ri}]}} ${RING}"
-    CONTENT+="#[fg=${ic}]#W"
+    CONTENT+="#[fg=${ic}]${WNAME}"
     CONTENT+="#[fg=${nf}]  "
 
     # Right sep (after-active only):
