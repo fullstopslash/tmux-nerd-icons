@@ -56,6 +56,16 @@ commit +message:
     fi
     [ -n "$BOOKMARK" ] || { echo "error: no main/trunk/master bookmark found" >&2; exit 1; }
     jj bookmark set "$BOOKMARK" -r @
+    # Detach @ from the bookmark BEFORE pushing: start the fresh empty child now
+    # so the bookmark points at the described commit and nothing can move it
+    # during the push loop. jj auto-snapshots the working copy before each
+    # `jj git push`; if @ were still the bookmark, an async write to a tracked
+    # file (e.g. the-desk rendering todo.md) landing between two remotes' pushes
+    # would amend @ and shove the bookmark sideways — splitting the push across
+    # two hashes. Guarded so an already-empty @ isn't re-stacked.
+    WC_STATE=$(jj log -r @ --no-graph \
+        -T 'if(empty, "empty", "dirty") ++ "-" ++ if(description, "desc", "nodesc")')
+    [ "$WC_STATE" = "empty-nodesc" ] || jj new
     REMOTES=$(jj git remote list | awk '{print $1}')
     [ -n "$REMOTES" ] || { echo "warn: no remotes configured, skipping push" >&2; exit 0; }
     # Push ONLY to remotes we own. A fork's `upstream` (and any other
@@ -83,13 +93,6 @@ commit +message:
         jj git push --remote "$remote" --bookmark "$BOOKMARK" --allow-new \
             || { echo "error: push to $remote failed" >&2; PUSH_FAILED=1; }
     done
-    # A successful push makes @ immutable, and jj then auto-creates a
-    # fresh empty child; an unconditional `jj new` would stack a second
-    # empty on top, stranding an undescribed commit that blocks the next
-    # push. Only start a new change when @ is still the described commit.
-    WC_STATE=$(jj log -r @ --no-graph \
-        -T 'if(empty, "empty", "dirty") ++ "-" ++ if(description, "desc", "nodesc")')
-    [ "$WC_STATE" = "empty-nodesc" ] || jj new
     exit $PUSH_FAILED
 
 # Reconcile beads <-> Taskwarrior/todo.md via the generalized `todo-sync`
